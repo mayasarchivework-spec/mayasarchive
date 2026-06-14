@@ -53,7 +53,7 @@ export const projects = [
      '/assets/blip-logo.png',
     ],
     tools: ['next.js(react)'],
-    skills: ['website design', 'website development, software development, api integration'],
+    skills: ['website design', 'website development, basic backend development'],
     summary: '2010 inspired social media',
     featured: true,
     category: 'software',
