@@ -17,7 +17,7 @@ export const profile = {
     'I make motion that sells and motion that ships — social ads and animated UI for startups and apps.',
     "let's make something good!.",
   ],
-  roles: ['Motion Designer','Software Engineer'],
+  roles: ['Motion Designer','Software Engineer', '3d artist'],
   links: [
     { label: 'Instagram', href: 'https://www.instagram.com/mayasarchive.zip/', icon: 'instagram', target: '_blank', rel: 'noopener noreferrer' },
     { label: 'TikTok', href: 'https://www.tiktok.com/@mayasarchive.zip', icon: 'tiktok', target: '_blank', rel: 'noopener noreferrer' },
