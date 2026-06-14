@@ -33,7 +33,7 @@ export const projects = [
     slug: 'luminate-concept-ad',
     title: 'luminate concept ad',
     media: [
-     '/assets/luminate-concept-ad.mp4',
+     '/assets/luminate-sfx',
      '/assets/luminate-ad-2.mp4',
     ],
     tools: ['Adobe After Effects'],
@@ -42,7 +42,7 @@ export const projects = [
     featured: true,
     category: 'social-media-ads',
     externalUrl: 'https://www.instagram.com/p/DX4biTToaLT/',
-    thumbnail: '/assets/luminate-concept-ad.mp4',
+    thumbnail: '/assets/luminate-ad-2.mp4',
   },
 
   {
