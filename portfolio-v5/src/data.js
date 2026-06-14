@@ -34,7 +34,7 @@ export const projects = [
     title: 'luminate concept ad',
     media: [
      '/assets/luminate-concept-ad.mp4',
-     '/assets/luminate-anumation-sheet.mp4',
+     '/assets/luminate-ad-2.mp4',
     ],
     tools: ['Adobe After Effects'],
     skills: ['Motion Design'],
@@ -46,22 +46,19 @@ export const projects = [
   },
 
   {
-    id: 'lockette',
-    slug: 'Lockette',
-    title: 'Lockette study web app',
+    id: 'blip',
+    slug: 'blip',
+    title: 'blip',
     media: [
-     '/assets/lockette-1.png',
-     '/assets/lockette-2.png',
-     '/assets/lockette-3.png',
-     '/assets/lockette-4.png',
+     'assets/blip-logo.png',
     ],
     tools: ['next.js(react)'],
     skills: ['website design', 'website development, software development, api integration'],
-    summary: 'Ready to focus your study? Get started with Lockette for free and lock in your next success today!. Integrated google gemini ai and basic database for emails etc. This app is up for sale btw ❤ dm to buy',
+    summary: '2010 inspired social media',
     featured: true,
     category: 'software',
-    externalUrl: 'https://lockette.uk/',
-    thumbnail: '/assets/lockette-4.png',
+    externalUrl: 'https://myblip.ord/',
+    thumbnail: 'assets/blip-logo.png',
   },
 
   {
@@ -78,22 +75,7 @@ export const projects = [
     thumbnail: '/assets/faircado ad final(1).mp4',
   },
 
-  {
-    id: 'equals',
-    slug: 'equals-concept-ad',
-    title: 'euqals concept ad',
-    media: [
-      '/assets/equals ad.mp4',
-      '/assets/equalsmoodboard.png',
-    ],
-    tools: ['Adobe After Effects'],
-    skills: ['Motion Design'],
-    summary: 'A clean simple social media ad for equals that i made in my free time to showcase my 3d skill, went for a dreamy feel',
-    featured: false,
-    category: 'social-media-ads',
-    externalUrl: 'https://www.instagram.com/p/DYw9UeoIdWm/',
-    thumbnail: '/assets/equals ad.mp4',
-  },
+ 
 
     {
     id: 'ots',
