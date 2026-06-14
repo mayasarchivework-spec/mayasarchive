@@ -33,7 +33,7 @@ export const projects = [
     slug: 'luminate-concept-ad',
     title: 'luminate concept ad',
     media: [
-     '/assets/luminate-sfx',
+     '/assets/luminate-sfx.mp4',
      '/assets/luminate-ad-2.mp4',
     ],
     tools: ['Adobe After Effects'],
@@ -50,7 +50,7 @@ export const projects = [
     slug: 'blip',
     title: 'blip',
     media: [
-     'assets/blip-logo.png',
+     '/assets/blip-logo.png',
     ],
     tools: ['next.js(react)'],
     skills: ['website design', 'website development, software development, api integration'],
@@ -58,7 +58,7 @@ export const projects = [
     featured: true,
     category: 'software',
     externalUrl: 'https://myblip.ord/',
-    thumbnail: 'assets/blip-logo.png',
+    thumbnail: '/assets/blip-logo.png',
   },
 
   {
