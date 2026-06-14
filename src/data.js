@@ -57,7 +57,7 @@ export const projects = [
     summary: '2010 inspired social media',
     featured: true,
     category: 'software',
-    externalUrl: 'https://myblip.ord/',
+    externalUrl: 'https://myblip.org/',
     thumbnail: '/assets/blip-logo.png',
   },
 
