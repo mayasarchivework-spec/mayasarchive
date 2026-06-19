@@ -454,33 +454,6 @@ h1, h2, h3, p { margin: 0; letter-spacing: 0; }
   to   { translate: 0 -10px; }
 }
 
-/* ── TikTok CTA ── */
-.tiktok-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 28px;
-  padding: 11px 20px;
-  border: 1.5px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 760;
-  color: var(--ink);
-  transition: background 180ms ease, transform 180ms ease;
-}
-
-.tiktok-cta:hover {
-  background: rgba(124, 13, 14, 0.05);
-  transform: translateY(-1px);
-}
-
-.tiktok-cta svg {
-  width: 17px;
-  height: 17px;
-  fill: currentColor;
-  flex-shrink: 0;
-}
-
 /* ── Project tiles / grid ── */
 .work-grid, .more-grid {
   display: grid;

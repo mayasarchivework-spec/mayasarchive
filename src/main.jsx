@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { ArrowUpRight, MapPin } from 'lucide-react';
 import './styles.css';
 import { TELEGRAM_PROFILE_URL, CATEGORIES, profile, projects } from './data';
+import ShopMain from './ShopMain';
 
 function App() {
   const [loaded, setLoaded] = React.useState(false);
@@ -16,7 +17,9 @@ function App() {
   }, [path]);
 
   let page;
-  if (path === '/work') {
+  if (path === '/shop') {
+    page = <ShopMain />;
+  } else if (path === '/work') {
     page = <AllWorksPage />;
   } else if (path.startsWith('/work/')) {
     const slug = path.split('/').filter(Boolean).at(-1);
@@ -66,6 +69,7 @@ function Header() {
       <nav className="nav-links" aria-label="Primary navigation">
         <a href="/#about">About</a>
         <a href="/work">Work</a>
+        <a href="/shop">Shop</a>
       </nav>
     </header>
   );
@@ -152,7 +156,6 @@ function WorksPreview() {
 }
 
 function AllWorksPage() {
-  const TIKTOK_URL = 'https://www.tiktok.com/@mayasarchive.zip';
   return (
     <section className="section-shell archive-page">
       <p className="eyebrow">All works</p>
@@ -181,13 +184,6 @@ function AllWorksPage() {
                 </div>
               ) : (
                 <p className="work-category-empty">Coming soon.</p>
-              )}
-              {cat.id === 'social-media-ads' && (
-                <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer" className="tiktok-cta">
-                  <SocialIcon name="tiktok" />
-                  view the rest on tiktok
-                  <ArrowUpRight size={16} aria-hidden="true" />
-                </a>
               )}
             </div>
           </React.Fragment>
