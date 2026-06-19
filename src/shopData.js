@@ -1,20 +1,37 @@
 export const SHOP_POLICY_URL = 'https://sites.google.com/view/mayasarchive-policy/home';
 
 export const shopProducts = [
-  /*
-  Add products here. Nothing is rendered until a real product object is added.
 
   {
-    id: 'unique-product-id',
-    title: 'product title',
-    price: 'GBP 25.00',
-    description: 'A clear description of the product.',
+    id: 'sfx-pack',
+    title: 'sfx pack',
+    price: 'GBP 5.00',
+    description: 'some sfx i got and created - can be used anywheren no refunds',
     media: [
-      { src: '/assets/product-front.jpg', alt: 'Front view of product title' },
-      { src: '/assets/product-back.jpg', alt: 'Back view of product title' },
-      { src: '/assets/product-video.mp4', type: 'video', alt: 'Product title video' },
+      { src: 'assets/sfx-thumbnail.png',},
     ],
-    checkoutUrl: 'https://your-payment-link.example',
+    checkoutUrl: 'https://payhip.com/buy?s=1&cart_links%5B%5D=x8A9p&qty%5Bx8A9p%5D=1',
   },
-  */
+
+    {
+    id: 'text-animation-pack',
+    title: 'text animation pack',
+    price: 'GBP 5.00',
+    description: 'ae 2022 and above, no refunds, i used deep glow and sapphire for some, the rest are expressions',
+    media: [
+      { src: 'assets/text-thumbnail.png',},
+    ],
+    checkoutUrl: 'https://payhip.com/buy?s=1&cart_links%5B%5D=muBIt&qty%5BmuBIt%5D=1',
+  },
+
+      {
+    id: 'edit-pack',
+    title: 'edit pack',
+    price: 'GBP 5.00',
+    description: 'includes my colouring, shakes etc, ae 2022 and above, no refunds, i used deep glow, film convert nitrate, looks and sapphire for some',
+    media: [
+      { src: 'assets/editing-thumnail.png',},
+    ],
+    checkoutUrl: 'https://payhip.com/buy?s=1&cart_links%5B%5D=lfLg9&qty%5BlfLg9%5D=1',
+  },
 ];

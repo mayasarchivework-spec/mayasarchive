@@ -33,8 +33,7 @@ export const projects = [
     id: 'luminate',
     slug: 'luminate-concept-ad',
     title: 'luminate concept ad',
-    media: [
-     '/assets/luminate-sfx.mp4',
+    media: [,
      '/assets/luminate-ad-2.mp4',
     ],
     tools: ['Adobe After Effects'],

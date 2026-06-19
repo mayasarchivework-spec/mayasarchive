@@ -169,7 +169,7 @@ function ProductDialog({ product, onClose }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Pay now
+                Buy now
                 <ArrowUpRight size={18} aria-hidden="true" />
               </a>
             ) : (
