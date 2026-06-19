@@ -21,8 +21,7 @@ export default function ShopMain() {
           <ShoppingBag size={16} aria-hidden="true" />
           mayasarchive shop
         </p>
-        <h1 id="shop-title">shop the archive</h1>
-        <p className="shop-intro">Original products, digital pieces, and limited drops.</p>
+        <h1 id="shop-title">shop</h1>
       </div>
 
       {products.length > 0 ? (
