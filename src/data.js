@@ -12,7 +12,6 @@ export const profile = {
   location: 'London, UK',
   avatar: '/assets/maya-profile.jpg',
   bio: [
-    "I’m a 16-year-old self-taught motion designer.",
     'I’m passionate about designing and building immersive digital experiences, from clean ui design to building products that work and marketing with addicting motion.',
     'I make motion that sells and motion that ships — social ads and animated UI for startups and apps.',
     "let's make something good!.",

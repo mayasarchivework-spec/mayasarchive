@@ -82,7 +82,7 @@ function HomePage() {
 
       <Divider />
 
-      <InfoSection id="about" eyebrow="About me" title="Addicting and converting motion">
+      <InfoSection id="about" eyebrow="About me" title="I create stuff">
         <div className="about-copy">
           {profile.bio.map((line) => (
             <p key={line}>{line}</p>
