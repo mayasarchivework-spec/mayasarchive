@@ -30,7 +30,8 @@ export const shopProducts = [
     price: 'GBP 5.00',
     description: 'includes my colouring, shakes etc, ae 2022 and above, no refunds, i used deep glow, film convert nitrate, looks and sapphire for some',
     media: [
-      { src: 'assets/editing-thumnail.png',},
+      { src: 'assets/editing-thumnail.png'},
+      {src: 'assets/velo-pack.mp4'},
     ],
     checkoutUrl: 'https://payhip.com/buy?s=1&cart_links%5B%5D=lfLg9&qty%5BlfLg9%5D=1',
   },
