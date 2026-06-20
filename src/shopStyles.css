@@ -183,6 +183,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
   width: min(1080px, 100%);
+  height: min(760px, calc(100vh - 56px));
   max-height: min(760px, calc(100vh - 56px));
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -210,16 +211,21 @@
 
 .shop-dialog-gallery {
   position: relative;
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
   min-height: 0;
   overflow: hidden;
   background: #e9e5e2;
 }
 
 .shop-dialog-media {
+  width: 100%;
+  height: 100%;
   min-height: 0;
-  overflow: hidden;
+  overflow: auto;
+}
+
+.shop-dialog-media img {
+  background: #fffdfd;
+  object-fit: contain;
 }
 
 .shop-dialog-media video {
@@ -228,35 +234,49 @@
 }
 
 .shop-gallery-controls {
-  display: grid;
-  grid-template-columns: 44px 1fr 44px;
-  gap: 10px;
+  position: absolute;
+  inset: 0;
+  display: flex;
   align-items: center;
-  padding: 10px 14px;
+  justify-content: space-between;
+  padding: 0 16px;
+  pointer-events: none;
   color: #ffffff;
-  background: #282323;
 }
 
 .shop-gallery-controls button {
   display: grid;
-  width: 44px;
-  height: 40px;
+  width: 46px;
+  height: 46px;
   place-items: center;
-  border: 0;
-  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 50%;
   color: #ffffff;
-  background: transparent;
+  background: rgba(28, 24, 24, 0.72);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  pointer-events: auto;
   cursor: pointer;
 }
 
 .shop-gallery-controls button:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(124, 13, 14, 0.9);
 }
 
 .shop-gallery-controls span {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(28, 24, 24, 0.72);
   font-size: 0.75rem;
   font-weight: 700;
   text-align: center;
+  transform: translateX(-50%);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .shop-dialog-details {
@@ -397,7 +417,17 @@
   .shop-dialog {
     grid-template-columns: 1fr;
     grid-template-rows: minmax(300px, 54vh) auto;
+    height: auto;
     max-height: none;
+  }
+
+  .shop-gallery-controls {
+    padding: 0 10px;
+  }
+
+  .shop-gallery-controls button {
+    width: 42px;
+    height: 42px;
   }
 
   .shop-dialog-details {
