@@ -20,9 +20,7 @@ export const profile = {
   links: [
     { label: 'Instagram', href: 'https://www.instagram.com/mayasarchive.zip/', icon: 'instagram', target: '_blank', rel: 'noopener noreferrer' },
     { label: 'TikTok', href: 'https://www.tiktok.com/@mayasarchive.zip', icon: 'tiktok', target: '_blank', rel: 'noopener noreferrer' },
-    { label: 'YouTube', href: 'https://www.youtube.com/@mayasarch1ve', icon: 'youtube', target: '_blank', rel: 'noopener noreferrer' },
     { label: 'email', href: 'mailto:mayasarchive.work@gmail.com', icon: 'Email', target: '_blank', rel: 'noopener noreferrer' },
-    { href: 'https://www.threads.com/@mayasarchive.zip', label: 'threads', icon: 'threads', target: '_blank', rel: 'noopener noreferrer' },
   ],
 };
 
