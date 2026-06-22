@@ -1,4 +1,4 @@
-export const TELEGRAM_PROFILE_URL = 'https://wa.me/message/CXY6GG6AUHNRE1';
+ export const TELEGRAM_PROFILE_URL = 'https://wa.me/message/CXY6GG6AUHNRE1';
 
 export const CATEGORIES = [
   { id: 'social-media-ads', label: 'motion design' },
@@ -32,6 +32,7 @@ export const projects = [
     title: 'luminate concept ad',
     media: [,
      '/assets/luminate-ad-2.mp4',
+     '/assets/luminate-sfx.mp4',
     ],
     tools: ['Adobe After Effects'],
     skills: ['Motion Design'],
