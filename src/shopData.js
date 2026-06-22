@@ -32,6 +32,7 @@ export const shopProducts = [
     media: [
       { src: 'assets/editing-thumnail.png'},
       {src: 'assets/velo-pack.mp4'},
+      {src: 'assets/wink-tutorial.mp4'},
     ],
     checkoutUrl: 'https://payhip.com/buy?s=1&cart_links%5B%5D=lfLg9&qty%5BlfLg9%5D=1',
   },
