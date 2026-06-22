@@ -20,7 +20,7 @@ export const shopProducts = [
     description: 'ae 2022 and above, no refunds, i used deep glow and sapphire for some, the rest are expressions',
     media: [
       { src: 'assets/text-thumbnail.png',},
-      {src: 'assets/text-animation.mp4',},
+      {src: 'assets/text-animations.mp4',},
     ],
     checkoutUrl: 'https://payhip.com/buy?s=1&cart_links%5B%5D=muBIt&qty%5BmuBIt%5D=1',
   },
