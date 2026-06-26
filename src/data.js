@@ -75,6 +75,54 @@ export const projects = [
     externalUrl: 'https://www.youtube.com/watch?v=4avxTWUox-I',
     thumbnail: '/assets/ots logo animation blue sfx.mp4',
   },
+
+     {
+    id: 'pink-noise',
+    slug: 'pink-noise',
+    title: 'pink noise',
+    media: [
+      '/assets/pink-noise.jpg',
+    ],
+    tools: ['Blender, Affinity'],
+    skills: ['3D design, Graphic design'],
+    summary: 'design for nothing 4a pro using blender and affinity',
+    featured: true,
+    category: '3d-works',
+    externalUrl: 'https://www.instagram.com/p/DaECfOdiGmN/?img_index=1',
+    thumbnail: '/assets/pink-noise.jpg' ,
+  },
+
+      {
+    id: 'nothing-text',
+    slug: 'nothing-text',
+    title: 'nothing text',
+    media: [
+      '/assets/nothing-text.jpg',
+    ],
+    tools: ['Blender, Affinity'],
+    skills: ['3D design, Graphic design'],
+    summary: 'design for nothing 4a pro using blender and affinity',
+    featured: true,
+    category: '3d-works',
+    externalUrl: 'https://www.instagram.com/p/DaECfOdiGmN/?img_index=1',
+    thumbnail: '/assets/nothing-text.jpg' ,
+  },
+
+       {
+    id: 'nothing-camera',
+    slug: 'nothing-camera',
+    title: 'nothing camera',
+    media: [
+      '/assets/nothing-camera.jpg',
+    ],
+    tools: ['Blender, Affinity'],
+    skills: ['3D design, Graphic design'],
+    summary: 'design for nothing 4a pro using blender and affinity',
+    featured: true,
+    category: '3d-works',
+    externalUrl: 'https://www.instagram.com/p/DaECfOdiGmN/?img_index=1',
+    thumbnail: '/assets/nothing-camera.jpg' ,
+  },
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
