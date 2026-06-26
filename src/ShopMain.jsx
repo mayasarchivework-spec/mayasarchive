@@ -213,9 +213,13 @@ function ProductMedia({ item, title, preview = false }) {
         muted={preview}
         playsInline
         preload="metadata"
+        controlsList="nodownload noplaybackrate noremoteplayback"
+        disablePictureInPicture
+        disableRemotePlayback
+        draggable="false"
       />
     );
   }
 
-  return <img src={item.src} alt={item.alt || title} />;
+  return <img src={item.src} alt={item.alt || title} draggable="false" />;
 }

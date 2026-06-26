@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { ArrowUpRight, MapPin } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, MapPin, X } from 'lucide-react';
 import './styles.css';
-import { TELEGRAM_PROFILE_URL, CATEGORIES, profile, projects } from './data';
+import { TELEGRAM_PROFILE_URL, profile, projects } from './data';
 import ShopMain from './ShopMain';
 
 function App() {
@@ -15,6 +15,21 @@ function App() {
       document.querySelector(window.location.hash)?.scrollIntoView();
     });
   }, [path]);
+
+  React.useEffect(() => {
+    const blockMediaSave = (event) => {
+      if (event.target instanceof Element && event.target.closest('img, video')) {
+        event.preventDefault();
+      }
+    };
+
+    document.addEventListener('contextmenu', blockMediaSave);
+    document.addEventListener('dragstart', blockMediaSave);
+    return () => {
+      document.removeEventListener('contextmenu', blockMediaSave);
+      document.removeEventListener('dragstart', blockMediaSave);
+    };
+  }, []);
 
   let page;
   if (path === '/shop') {
@@ -113,6 +128,10 @@ function HeroSection() {
           loop
           muted
           playsInline
+          controlsList="nodownload noplaybackrate noremoteplayback"
+          disablePictureInPicture
+          disableRemotePlayback
+          draggable="false"
           aria-hidden="true"
         />
       </div>
@@ -156,6 +175,9 @@ function WorksPreview() {
 }
 
 function AllWorksPage() {
+  const [selectedProject, setSelectedProject] = React.useState(null);
+  const visibleProjects = projects.filter((project) => project?.id && project?.title);
+
   return (
     <section className="section-shell archive-page">
       <p className="eyebrow">All works</p>
@@ -167,28 +189,22 @@ function AllWorksPage() {
         </a>
       </div>
 
-      {CATEGORIES.map((cat) => {
-        const catProjects = projects.filter((p) => p.category === cat.id);
-        return (
-          <React.Fragment key={cat.id}>
-            <div className="work-category fade-up">
-              <div className="work-category-header">
-                <span className="eyebrow">{cat.label}</span>
-                <div className="work-category-line" aria-hidden="true" />
-              </div>
-              {catProjects.length > 0 ? (
-                <div className="work-grid">
-                  {catProjects.map((project) => (
-                    <ProjectTile key={project.id} project={project} />
-                  ))}
-                </div>
-              ) : (
-                <p className="work-category-empty">Coming soon.</p>
-              )}
-            </div>
-          </React.Fragment>
-        );
-      })}
+      {visibleProjects.length > 0 ? (
+        <div className="work-mosaic fade-up" aria-label="Work thumbnails">
+          {visibleProjects.map((project) => (
+            <ProjectTile
+              key={project.id}
+              project={project}
+              thumbnailOnly
+              onOpen={() => setSelectedProject(project)}
+            />
+          ))}
+        </div>
+      ) : (
+        <p className="work-category-empty">Coming soon.</p>
+      )}
+
+      {selectedProject && <ProjectDialog project={selectedProject} onClose={() => setSelectedProject(null)} />}
     </section>
   );
 }
@@ -260,6 +276,114 @@ function ProjectPage({ project }) {
   );
 }
 
+function ProjectDialog({ project, onClose }) {
+  const media = getProjectMedia(project);
+  const [mediaIndex, setMediaIndex] = React.useState(0);
+  const closeButtonRef = React.useRef(null);
+  const hasMultipleMedia = media.length > 1;
+
+  const showPrevious = React.useCallback(() => {
+    setMediaIndex((index) => (index - 1 + media.length) % media.length);
+  }, [media.length]);
+
+  const showNext = React.useCallback(() => {
+    setMediaIndex((index) => (index + 1) % media.length);
+  }, [media.length]);
+
+  React.useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') onClose();
+      if (hasMultipleMedia && event.key === 'ArrowLeft') showPrevious();
+      if (hasMultipleMedia && event.key === 'ArrowRight') showNext();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [hasMultipleMedia, onClose, showNext, showPrevious]);
+
+  return (
+    <div
+      className="work-dialog-backdrop"
+      role="presentation"
+      onMouseDown={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
+    >
+      <section
+        className="work-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={`work-dialog-title-${project.id}`}
+      >
+        <button
+          ref={closeButtonRef}
+          className="work-dialog-close"
+          type="button"
+          onClick={onClose}
+          aria-label="Close work details"
+          title="Close"
+        >
+          <X size={20} aria-hidden="true" />
+        </button>
+
+        <div className="work-dialog-gallery">
+          <div className="work-dialog-media">
+            {media[mediaIndex] ? (
+              <VideoPreview
+                key={`${media[mediaIndex]}-${mediaIndex}`}
+                src={media[mediaIndex]}
+                title={`${project.title} ${mediaIndex + 1}`}
+                controls
+              />
+            ) : (
+              <p className="work-dialog-empty">Preview coming soon.</p>
+            )}
+          </div>
+
+          {hasMultipleMedia && (
+            <div className="work-gallery-controls">
+              <button type="button" onClick={showPrevious} aria-label="Previous media" title="Previous">
+                <ArrowLeft size={20} aria-hidden="true" />
+              </button>
+              <span aria-live="polite">
+                {mediaIndex + 1} / {media.length}
+              </span>
+              <button type="button" onClick={showNext} aria-label="Next media" title="Next">
+                <ArrowRight size={20} aria-hidden="true" />
+              </button>
+            </div>
+          )}
+        </div>
+
+        <aside className="work-dialog-details" aria-label="Work details">
+          <p className="work-dialog-label">Project</p>
+          <h2 id={`work-dialog-title-${project.id}`}>{project.title}</h2>
+          {project.summary && <p className="work-dialog-description">{project.summary}</p>}
+
+          <div className="work-dialog-meta">
+            <PlainList title="Skills" items={project.skills || []} />
+            <PlainList title="Tools used" items={project.tools || []} />
+          </div>
+
+          {project.externalUrl && (
+            <a className="work-dialog-view" href={project.externalUrl} target="_blank" rel="noopener noreferrer">
+              View work
+              <ArrowUpRight aria-hidden="true" size={18} />
+            </a>
+          )}
+        </aside>
+      </section>
+    </div>
+  );
+}
+
 function NotFoundPage() {
   return (
     <section className="section-shell archive-page">
@@ -285,21 +409,49 @@ function InfoSection({ id, eyebrow, title, children }) {
   );
 }
 
-function ProjectTile({ project }) {
-  return (
-    <a className="project-tile" href={`/work/${project.slug}`} aria-label={`Open ${project.title}`}>
+function ProjectTile({ project, onOpen, thumbnailOnly = false }) {
+  const thumbnail = getProjectThumbnail(project);
+  const className = thumbnailOnly ? 'project-tile thumbnail-only' : 'project-tile';
+  const content = (
+    <>
       <div className="project-media small">
-        <VideoPreview
-          src={project.thumbnail || (Array.isArray(project.media) ? project.media[0] : project.media)}
-          title={project.title}
-        />
+        <VideoPreview src={thumbnail} title={project.title} />
       </div>
-      <div className="project-tile-copy">
-        <h3>{project.title}</h3>
-        <span>{project.skills.join(', ')}</span>
-      </div>
+
+      {!thumbnailOnly && (
+        <div className="project-tile-copy">
+          <h3>{project.title}</h3>
+          <span>{project.skills.join(', ')}</span>
+        </div>
+      )}
+    </>
+  );
+
+  if (onOpen) {
+    return (
+      <button className={className} type="button" onClick={onOpen} aria-label={`Open ${project.title}`}>
+        {content}
+      </button>
+    );
+  }
+
+  return (
+    <a className={className} href={`/work/${project.slug}`} aria-label={`Open ${project.title}`}>
+      {content}
     </a>
   );
+}
+
+function getProjectMedia(project) {
+  const media = Array.isArray(project.media) ? project.media : [project.media];
+  return media
+    .filter(Boolean)
+    .map((item) => (typeof item === 'string' ? item : item?.src))
+    .filter(Boolean);
+}
+
+function getProjectThumbnail(project) {
+  return project.thumbnail || getProjectMedia(project)[0];
 }
 
 function SocialLinks({ inverted = false }) {
@@ -334,7 +486,7 @@ function Footer() {
         <div>
           <p>{profile.roles.join(' - ')}</p>
           <h2>{profile.name}</h2>
-          <p className="copyright-text">© MAYASARCHIVE 2026. All rights reserved.</p>
+          <p className="copyright-text">&copy; MAYASARCHIVE 2026. All rights reserved.</p>
         </div>
         <SocialLinks inverted />
       </div>
@@ -345,9 +497,22 @@ function Footer() {
 function VideoPreview({ src, title, controls = false }) {
   if (!src || typeof src !== 'string') return null;
   const isImage = /\.(png|jpe?g|gif|webp|avif|svg)(\?|$)/i.test(src);
-  if (isImage) return <img src={src} alt={title} />;
+  if (isImage) return <img src={src} alt={title} draggable="false" />;
   return (
-    <video aria-label={title} autoPlay controls={controls} loop muted playsInline preload="metadata" src={src} />
+    <video
+      aria-label={title}
+      autoPlay
+      controls={controls}
+      controlsList="nodownload noplaybackrate noremoteplayback"
+      disablePictureInPicture
+      disableRemotePlayback
+      draggable="false"
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      src={src}
+    />
   );
 }
 
