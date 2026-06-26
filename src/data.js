@@ -44,22 +44,6 @@ export const projects = [
   },
 
   {
-    id: 'blip',
-    slug: 'blip',
-    title: 'blip',
-    media: [
-     '/assets/blip-logo.png',
-    ],
-    tools: ['next.js(react), typescript'],
-    skills: ['website design', 'website development, basic backend development'],
-    summary: '2010 inspired social media',
-    featured: true,
-    category: 'software',
-    externalUrl: 'https://myblip.org/',
-    thumbnail: '/assets/blip-logo.png',
-  },
-
-  {
     id: 'faircado',
     slug: 'faircado-concept-ad',
     title: 'faircado concept ad',
