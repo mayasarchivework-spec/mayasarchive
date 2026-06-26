@@ -21,6 +21,7 @@ export const profile = {
     { label: 'Instagram', href: 'https://www.instagram.com/mayasarchive.zip/', icon: 'instagram', target: '_blank', rel: 'noopener noreferrer' },
     { label: 'TikTok', href: 'https://www.tiktok.com/@mayasarchive.zip', icon: 'tiktok', target: '_blank', rel: 'noopener noreferrer' },
     { label: 'email', href: 'mailto:mayasarchive.work@gmail.com', icon: 'Email', target: '_blank', rel: 'noopener noreferrer' },
+    { label: 'youtube', href: 'https://www.youtube.com/@mayaafterhours', icon: 'youtube', target: '_blank', rel: 'noopener noreferrer' },
   ],
 };
 
