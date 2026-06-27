@@ -2,8 +2,8 @@
 
 export const CATEGORIES = [
   { id: 'social-media-ads', label: 'motion design' },
-  { id: '3d-works',         label: '3D works' },
-  { id: 'software',         label: 'software engineering' },
+  { id: '3d-works',         label: '3D design' },
+  { id: 'software',         label: 'software eng' },
 ];
 
 export const profile = {
