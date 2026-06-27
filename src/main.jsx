@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { ArrowLeft, ArrowRight, ArrowUpRight, MapPin, X } from 'lucide-react';
+import { ArrowUpRight, MapPin } from 'lucide-react';
 import './styles.css';
-import { TELEGRAM_PROFILE_URL, profile, projects } from './data';
+import { TELEGRAM_PROFILE_URL, CATEGORIES, profile, projects } from './data';
 import ShopMain from './ShopMain';
 
 function App() {
@@ -175,9 +175,6 @@ function WorksPreview() {
 }
 
 function AllWorksPage() {
-  const [selectedProject, setSelectedProject] = React.useState(null);
-  const visibleProjects = projects.filter((project) => project?.id && project?.title);
-
   return (
     <section className="section-shell archive-page">
       <p className="eyebrow">All works</p>
@@ -189,22 +186,26 @@ function AllWorksPage() {
         </a>
       </div>
 
-      {visibleProjects.length > 0 ? (
-        <div className="work-mosaic fade-up" aria-label="Work thumbnails">
-          {visibleProjects.map((project) => (
-            <ProjectTile
-              key={project.id}
-              project={project}
-              thumbnailOnly
-              onOpen={() => setSelectedProject(project)}
-            />
-          ))}
-        </div>
-      ) : (
-        <p className="work-category-empty">Coming soon.</p>
-      )}
-
-      {selectedProject && <ProjectDialog project={selectedProject} onClose={() => setSelectedProject(null)} />}
+      {CATEGORIES.map((cat) => {
+        const catProjects = projects.filter((p) => p.category === cat.id);
+        return (
+          <div key={cat.id} className="work-category fade-up">
+            <div className="work-category-header">
+              <span className="eyebrow">{cat.label}</span>
+              <div className="work-category-line" aria-hidden="true" />
+            </div>
+            {catProjects.length > 0 ? (
+              <div className="work-grid" aria-label={cat.label}>
+                {catProjects.map((project) => (
+                  <ProjectTile key={project.id} project={project} />
+                ))}
+              </div>
+            ) : (
+              <p className="work-category-empty">Coming soon.</p>
+            )}
+          </div>
+        );
+      })}
     </section>
   );
 }
@@ -261,8 +262,8 @@ function ProjectPage({ project }) {
         <section className="section-shell more-section fade-up">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">More projects</p>
-              <h2>Keep watching</h2>
+              <p className="eyebrow">More works</p>
+              <h2>view more work</h2>
             </div>
           </div>
           <div className="more-grid">
@@ -273,114 +274,6 @@ function ProjectPage({ project }) {
         </section>
       )}
     </article>
-  );
-}
-
-function ProjectDialog({ project, onClose }) {
-  const media = getProjectMedia(project);
-  const [mediaIndex, setMediaIndex] = React.useState(0);
-  const closeButtonRef = React.useRef(null);
-  const hasMultipleMedia = media.length > 1;
-
-  const showPrevious = React.useCallback(() => {
-    setMediaIndex((index) => (index - 1 + media.length) % media.length);
-  }, [media.length]);
-
-  const showNext = React.useCallback(() => {
-    setMediaIndex((index) => (index + 1) % media.length);
-  }, [media.length]);
-
-  React.useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    closeButtonRef.current?.focus();
-
-    const handleKeyDown = (event) => {
-      if (event.key === 'Escape') onClose();
-      if (hasMultipleMedia && event.key === 'ArrowLeft') showPrevious();
-      if (hasMultipleMedia && event.key === 'ArrowRight') showNext();
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [hasMultipleMedia, onClose, showNext, showPrevious]);
-
-  return (
-    <div
-      className="work-dialog-backdrop"
-      role="presentation"
-      onMouseDown={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
-    >
-      <section
-        className="work-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={`work-dialog-title-${project.id}`}
-      >
-        <button
-          ref={closeButtonRef}
-          className="work-dialog-close"
-          type="button"
-          onClick={onClose}
-          aria-label="Close work details"
-          title="Close"
-        >
-          <X size={20} aria-hidden="true" />
-        </button>
-
-        <div className="work-dialog-gallery">
-          <div className="work-dialog-media">
-            {media[mediaIndex] ? (
-              <VideoPreview
-                key={`${media[mediaIndex]}-${mediaIndex}`}
-                src={media[mediaIndex]}
-                title={`${project.title} ${mediaIndex + 1}`}
-                controls
-              />
-            ) : (
-              <p className="work-dialog-empty">Preview coming soon.</p>
-            )}
-          </div>
-
-          {hasMultipleMedia && (
-            <div className="work-gallery-controls">
-              <button type="button" onClick={showPrevious} aria-label="Previous media" title="Previous">
-                <ArrowLeft size={20} aria-hidden="true" />
-              </button>
-              <span aria-live="polite">
-                {mediaIndex + 1} / {media.length}
-              </span>
-              <button type="button" onClick={showNext} aria-label="Next media" title="Next">
-                <ArrowRight size={20} aria-hidden="true" />
-              </button>
-            </div>
-          )}
-        </div>
-
-        <aside className="work-dialog-details" aria-label="Work details">
-          <p className="work-dialog-label">Project</p>
-          <h2 id={`work-dialog-title-${project.id}`}>{project.title}</h2>
-          {project.summary && <p className="work-dialog-description">{project.summary}</p>}
-
-          <div className="work-dialog-meta">
-            <PlainList title="Skills" items={project.skills || []} />
-            <PlainList title="Tools used" items={project.tools || []} />
-          </div>
-
-          {project.externalUrl && (
-            <a className="work-dialog-view" href={project.externalUrl} target="_blank" rel="noopener noreferrer">
-              View work
-              <ArrowUpRight aria-hidden="true" size={18} />
-            </a>
-          )}
-        </aside>
-      </section>
-    </div>
   );
 }
 
@@ -409,7 +302,7 @@ function InfoSection({ id, eyebrow, title, children }) {
   );
 }
 
-function ProjectTile({ project, onOpen, thumbnailOnly = false }) {
+function ProjectTile({ project, thumbnailOnly = false }) {
   const thumbnail = getProjectThumbnail(project);
   const className = thumbnailOnly ? 'project-tile thumbnail-only' : 'project-tile';
   const content = (
@@ -426,14 +319,6 @@ function ProjectTile({ project, onOpen, thumbnailOnly = false }) {
       )}
     </>
   );
-
-  if (onOpen) {
-    return (
-      <button className={className} type="button" onClick={onOpen} aria-label={`Open ${project.title}`}>
-        {content}
-      </button>
-    );
-  }
 
   return (
     <a className={className} href={`/work/${project.slug}`} aria-label={`Open ${project.title}`}>
