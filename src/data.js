@@ -130,7 +130,7 @@ export const projects = [
     slug: 'lockette',
     title: 'lockette',
     media: [
-      '/assets/lockette.jpg',
+      '/assets/lockette.png',
     ],
     tools: ['vscode'],
     skills: ['next.js, css'],
@@ -138,7 +138,7 @@ export const projects = [
     featured: true,
     category: 'software',
     externalUrl: 'https://lockette.uk/',
-    thumbnail: '/assets/lockette.jpg' ,
+    thumbnail: '/assets/lockette.png' ,
   },
 
         {
@@ -146,7 +146,7 @@ export const projects = [
     slug: 'blip',
     title: 'blip',
     media: [
-      '/assets/blip.jpg',
+      '/assets/blip-brand-icon.png',
     ],
     tools: ['vscode'],
     skills: ['next.js, css'],
@@ -154,7 +154,7 @@ export const projects = [
     featured: true,
     category: 'software',
     externalUrl: 'https://myblip.org/',
-    thumbnail: '/assets/blip.jpg' ,
+    thumbnail: '/assets/blip-brand-icon.png' ,
   },
 
          {
