@@ -171,7 +171,7 @@ export const projects = [
     summary: 'imaging affinity, my go to for graphic design wanted to make a marketplace for their users to sell assets, this would be their logo, but they are never going to see this',
     featured: true,
     category: '3d-works',
-    thumbnail: '/assets/finityhub-black.jpg' ,
+    thumbnail: '/assets/finityhub-black.png' ,
   },
  
 ];
