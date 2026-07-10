@@ -2,17 +2,6 @@ export const SHOP_POLICY_URL = 'https://sites.google.com/view/mayasarchive-polic
 
 export const shopProducts = [
 
-  {
-    id: 'sfx-pack',
-    title: 'sfx pack',
-    price: 'GBP 5.00',
-    description: 'some sfx i got and created - can be used anywheren no refunds',
-    media: [
-      { src: 'assets/sfx-thumbnail.png',},
-    ],
-    checkoutUrl: 'https://payhip.com/buy?s=1&cart_links%5B%5D=x8A9p&qty%5Bx8A9p%5D=1',
-  },
-
     {
     id: 'text-animation-pack',
     title: 'text animation pack',
