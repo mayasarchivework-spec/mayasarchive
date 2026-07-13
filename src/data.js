@@ -125,38 +125,6 @@ export const projects = [
     thumbnail: '/assets/nothing-camera.jpg' ,
   },
 
-       {
-    id: 'lockette',
-    slug: 'lockette',
-    title: 'lockette',
-    media: [
-      '/assets/lockette.png',
-    ],
-    tools: ['vscode'],
-    skills: ['next.js, css'],
-    summary: 'study assistant',
-    featured: true,
-    category: 'software',
-    externalUrl: 'https://lockette.uk/',
-    thumbnail: '/assets/lockette.png' ,
-  },
-
-        {
-    id: 'blip',
-    slug: 'blip',
-    title: 'blip',
-    media: [
-      '/assets/blip-brand-icon.png',
-    ],
-    tools: ['vscode'],
-    skills: ['next.js, css'],
-    summary: '2010 insta inspired social media',
-    featured: true,
-    category: 'software',
-    externalUrl: 'https://myblip.org/',
-    thumbnail: '/assets/blip-brand-icon.png' ,
-  },
- 
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
