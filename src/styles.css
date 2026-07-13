@@ -31,7 +31,7 @@ img, video {
   width: 100%;
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
-  user-select: none;
+  webkit-user-select: none;
 }
 
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -296,7 +296,114 @@ h1, h2, h3, p { margin: 0; letter-spacing: 0; }
   line-height: 1.35;
 }
 
-/* ── Works preview (homepage title list) ── */
+/* Music banner */
+.music-banner {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: clamp(300px, 36vw, 420px);
+  place-items: center;
+  margin-bottom: 72px;
+  overflow: hidden;
+  color: var(--ink);
+  background: transparent;
+}
+
+.music-banner-divider {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 24px;
+  background: rgba(124, 13, 14, 0.2);
+}
+
+.music-banner-copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: min(680px, calc(100% - 32px));
+  justify-items: center;
+  gap: 18px;
+  padding: clamp(24px, 5vw, 56px) 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.music-banner-copy .eyebrow {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.music-banner-copy h2 {
+  display: block;
+  text-align: center;
+  min-height: 1.02em;
+  color: var(--ink);
+  font-size: clamp(3.4rem, 8vw, 7.4rem);
+  font-weight: 800;
+  line-height: 0.92;
+  text-transform: lowercase;
+  margin: 0;
+  padding: 0;
+}
+
+.music-prefix,
+.music-comma {
+  display: inline-block;
+}
+
+.music-comma {
+  margin-left: 0.06em;
+}
+
+.music-word {
+  display: inline-block;
+  min-width: 0;
+  color: #9b191a;
+  text-align: center;
+  white-space: nowrap;
+  animation: music-word-rise 1700ms ease both infinite;
+  padding: 0 0.06em;
+}
+
+.music-banner-copy p:not(.eyebrow) {
+  max-width: 37rem;
+  color: var(--ink-soft);
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  font-weight: 540;
+  line-height: 1.45;
+}
+
+.music-button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 0 20px;
+  color: #ffffff;
+  background: var(--ink);
+  box-shadow: 0 18px 42px rgba(124, 13, 14, 0.16);
+  font-size: 0.95rem;
+  font-weight: 770;
+  line-height: 1;
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.music-button:hover {
+  background: #9b191a;
+  box-shadow: 0 22px 52px rgba(124, 13, 14, 0.2);
+  transform: translateY(-2px);
+}
+
+
+@keyframes music-word-rise {
+  0% { opacity: 0; transform: translateY(0.18em); }
+  18%, 78% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-0.16em); }
+}
+
+/* Works preview (homepage title list) */
 .works-preview {
   padding: 72px 0 88px;
   scroll-margin-top: 110px;
@@ -704,6 +811,7 @@ button.project-tile {
   .hero-folder { width: min(200px, 36vw); }
 
   .info-section,
+  .music-banner,
   .project-detail-grid {
     grid-template-columns: 1fr;
   }
@@ -719,8 +827,11 @@ button.project-tile {
   .project-summary { font-size: 1.12rem; }
 
   .project-detail-grid { gap: 28px; }
+
+  .music-banner { min-height: 430px; margin-bottom: 54px; }
 .work-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.works-title-item { grid-template-columns: 2.5rem 1fr 24px; }
+
+  .works-title-item { grid-template-columns: 2.5rem 1fr 24px; }
   .works-title-cat  { display: none; }
 
   .footer-inner { display: grid; }
@@ -753,7 +864,12 @@ button.project-tile {
   .project-page,
   .works-preview { padding-top: 54px; padding-bottom: 64px; }
 
-  .section-heading,
+  .music-banner { min-height: 390px; margin-bottom: 54px; }
+  .music-banner-copy { gap: 14px; padding: 22px 10px; }
+  .music-banner-copy h2 { display: flex; flex-wrap: nowrap; gap: 0.16em; font-size: 3rem; }
+  .music-word { min-width: 0; text-align: center; }
+  .music-banner-copy p:not(.eyebrow) { font-size: 1rem; }
+.section-heading,
   .page-title-row { display: grid; gap: 14px; }
 
   .info-section h2,

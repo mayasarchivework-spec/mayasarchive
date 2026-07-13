@@ -110,6 +110,8 @@ function HomePage() {
         </a>
       </InfoSection>
 
+      <MusicBanner />
+
       <Divider />
 
       <WorksPreview />
@@ -141,6 +143,40 @@ function HeroSection() {
           <span>{profile.location}</span>
         </div>
         <SocialLinks />
+      </div>
+    </section>
+  );
+}
+
+const musicAudiences = ['singer', 'songwriter', 'game dev', 'filmmaker', 'artist'];
+
+function MusicBanner() {
+  const [audienceIndex, setAudienceIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = window.setInterval(() => {
+      setAudienceIndex((index) => (index + 1) % musicAudiences.length);
+    }, 1700);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
+  return (
+    <section className="section-shell music-banner fade-up" aria-labelledby="music-banner-title">
+      <div className="music-banner-divider" aria-hidden="true" />
+      <div className="music-banner-copy">
+        <h2 id="music-banner-title">
+          <span className="music-prefix">dear</span>{' '}
+          <span className="music-word" aria-live="polite">{musicAudiences[audienceIndex]}</span>
+          <span className="music-comma">,</span>
+        </h2>
+        <p>
+          I've made some uk garage instrumentals for anyone who needs something to write over.
+        </p>
+        <a className="music-button" href="https://soundcloud.com/mayasarchive" target="_blank" rel="noopener noreferrer">
+          Listen on SoundCloud
+          <ArrowUpRight aria-hidden="true" size={18} />
+        </a>
       </div>
     </section>
   );
