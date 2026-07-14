@@ -74,7 +74,7 @@ export const projects = [
     featured: true,
     category: 'social-media-ads',
     externalUrl: 'https://www.youtube.com/watch?v=4avxTWUox-I',
-    thumbnail: '/assets/ots logo animation blue sfx.mp4',
+    thumbnail: '/assets/ots-logo-blue.mp4',
   },
 
      {
