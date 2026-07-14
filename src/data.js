@@ -65,8 +65,8 @@ export const projects = [
     slug: 'ots-logo-animation',
     title: 'ots logo animation',
     media: [
-      '/assets/ots logo animation blue sfx.mp4',
-      '/assets/ots logo animation yellow sfx.mp4',
+      '/assets/ots-logo-blue.mp4',
+      '/assets/ots-logo-yellow.mp4',
     ],
     tools: ['Adobe After Effects'],
     skills: ['Motion Design'],
