@@ -2,8 +2,7 @@
 
 export const CATEGORIES = [
   { id: 'social-media-ads', label: 'motion design' },
-  { id: '3d-works',         label: '3D design' },
-  { id: 'software',         label: 'software eng' },
+  { id: 'product-design',         label: 'product design' },
 ];
 
 export const profile = {
@@ -12,11 +11,10 @@ export const profile = {
   location: 'London, UK',
   avatar: '/assets/maya-profile.jpg',
   bio: [
-    'I’m passionate about designing and building immersive digital experiences, from clean ui design to building products that work and marketing with addicting motion.',
-    'I make motion that sells and motion that ships — social ads and animated UI for startups and apps.',
+    'I make motion that sells for startups and apps.',
     "let's make something good!.",
   ],
-  roles: ['Motion Designer','Software Engineer', '3d artist'],
+  roles: ['Motion Designer',''],
   links: [
     { label: 'Instagram', href: 'https://www.instagram.com/mayasarchive.zip/', icon: 'instagram', target: '_blank', rel: 'noopener noreferrer' },
     { label: 'TikTok', href: 'https://www.tiktok.com/@mayasarchive.zip', icon: 'tiktok', target: '_blank', rel: 'noopener noreferrer' },
@@ -75,54 +73,6 @@ export const projects = [
     category: 'social-media-ads',
     externalUrl: 'https://www.youtube.com/watch?v=4avxTWUox-I',
     thumbnail: '/assets/ots-logo-blue.mp4',
-  },
-
-     {
-    id: 'pink-noise',
-    slug: 'pink-noise',
-    title: 'pink noise',
-    media: [
-      '/assets/pink-noise.jpg',
-    ],
-    tools: ['Blender, Affinity'],
-    skills: ['3D design, Graphic design'],
-    summary: 'design for nothing 4a pro using blender and affinity',
-    featured: true,
-    category: '3d-works',
-    externalUrl: 'https://www.instagram.com/p/DaECfOdiGmN/?img_index=1',
-    thumbnail: '/assets/pink-noise.jpg' ,
-  },
-
-      {
-    id: 'nothing-text',
-    slug: 'nothing-text',
-    title: 'nothing text',
-    media: [
-      '/assets/nothing-text.jpg',
-    ],
-    tools: ['Blender, Affinity'],
-    skills: ['3D design, Graphic design'],
-    summary: 'design for nothing 4a pro using blender and affinity',
-    featured: true,
-    category: '3d-works',
-    externalUrl: 'https://www.instagram.com/p/DaECfOdiGmN/?img_index=1',
-    thumbnail: '/assets/nothing-text.jpg' ,
-  },
-
-       {
-    id: 'nothing-camera',
-    slug: 'nothing-camera',
-    title: 'nothing camera',
-    media: [
-      '/assets/nothing-camera.jpg',
-    ],
-    tools: ['Blender, Affinity'],
-    skills: ['3D design, Graphic design'],
-    summary: 'design for nothing 4a pro using blender and affinity',
-    featured: true,
-    category: '3d-works',
-    externalUrl: 'https://www.instagram.com/p/DaECfOdiGmN/?img_index=1',
-    thumbnail: '/assets/nothing-camera.jpg' ,
   },
 
 ];

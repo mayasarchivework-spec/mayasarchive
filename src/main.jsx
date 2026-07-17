@@ -211,6 +211,21 @@ function WorksPreview() {
 }
 
 function AllWorksPage() {
+  const [activeCategoryId, setActiveCategoryId] = React.useState(CATEGORIES[0]?.id);
+
+  const scrollToCategory = (categoryId) => {
+    setActiveCategoryId(categoryId);
+
+    // next render puts the requested category grid into the DOM
+    window.requestAnimationFrame(() => {
+      const el = document.querySelector(`#work-results-${categoryId}`);
+      el?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    });
+  };
+
+  const activeCategory = CATEGORIES.find((c) => c.id === activeCategoryId) ?? CATEGORIES[0];
+  const activeProjects = projects.filter((p) => p.category === activeCategory.id);
+
   return (
     <section className="section-shell archive-page">
       <p className="eyebrow">All works</p>
@@ -222,29 +237,44 @@ function AllWorksPage() {
         </a>
       </div>
 
-      {CATEGORIES.map((cat) => {
-        const catProjects = projects.filter((p) => p.category === cat.id);
-        return (
-          <div key={cat.id} className="work-category fade-up">
-            <div className="work-category-header">
-              <span className="eyebrow">{cat.label}</span>
-              <div className="work-category-line" aria-hidden="true" />
-            </div>
-            {catProjects.length > 0 ? (
-              <div className="work-grid" aria-label={cat.label}>
-                {catProjects.map((project) => (
-                  <ProjectTile key={project.id} project={project} />
-                ))}
-              </div>
-            ) : (
-              <p className="work-category-empty">Coming soon.</p>
-            )}
+      <div className="work-filter" role="tablist" aria-label="Filter work categories">
+        {CATEGORIES.map((cat) => {
+          const isActive = cat.id === activeCategoryId;
+          return (
+            <button
+              key={cat.id}
+              type="button"
+              className={isActive ? 'is-active' : undefined}
+              role="tab"
+              aria-selected={isActive}
+              aria-controls={`work-results-${cat.id}`}
+              onClick={() => scrollToCategory(cat.id)}
+            >
+              {cat.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="work-category fade-up">
+        {activeProjects.length > 0 ? (
+          <div
+            id={`work-results-${activeCategory.id}`}
+            className="work-grid"
+            aria-label={activeCategory.label}
+          >
+            {activeProjects.map((project) => (
+              <ProjectTile key={project.id} project={project} />
+            ))}
           </div>
-        );
-      })}
+        ) : (
+          <p className="work-category-empty">Coming soon.</p>
+        )}
+      </div>
     </section>
   );
 }
+
 
 function ProjectPage({ project }) {
   const moreProjects = projects.filter((item) => item.id !== project.id).slice(0, 2);
