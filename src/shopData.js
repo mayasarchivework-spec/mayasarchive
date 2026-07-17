@@ -6,7 +6,7 @@ export const shopProducts = [
     id: 'text-animation-pack',
     title: 'text animation pack',
     price: 'GBP 5.00',
-    description: 'ae 2022 and above, no refunds, i used deep glow and sapphire for some, the rest are expressions',
+    description: '10+ text animations, ae 2022 and above, no refunds, i used deep glow and sapphire for some, the rest are expressions',
     media: [
       { src: 'assets/text-thumbnail.png',},
       {src: 'assets/text-animations.mp4',},
