@@ -75,6 +75,22 @@ export const projects = [
     thumbnail: '/assets/ots-logo-blue.mp4',
   },
 
+     {
+    id: 'apple-invites',
+    slug: 'apple-invites-ad',
+    title: 'apple-invites-ad',
+    media: [
+      '/assets/Apple-Invites-Ad.mp4',
+    ],
+    tools: ['Adobe After Effects'],
+    skills: ['Motion Design'],
+    summary: 'concept ad for apple invites',
+    featured: true,
+    category: 'social-media-ads',
+    externalUrl: '',
+    thumbnail: '/assets/ots-logo-blue.mp4',
+  },
+
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
