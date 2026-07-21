@@ -88,7 +88,7 @@ export const projects = [
     featured: true,
     category: 'social-media-ads',
     externalUrl: '',
-    thumbnail: '/assets/ots-logo-blue.mp4',
+    thumbnail: '/assets/Apple-Invites-Ad.mp4',
   },
 
 ];
