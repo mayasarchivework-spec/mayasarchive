@@ -146,9 +146,32 @@ function HomePage() {
 }
 
 function HeroVideoSection() {
+  const videoRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+
+    const attemptPlay = () => {
+      el.play().catch(() => {
+        // Mobile browsers often block autoplay — retry on first user interaction
+        const handler = () => {
+          el.play().catch(() => {});
+          document.removeEventListener('touchstart', handler);
+          document.removeEventListener('click', handler);
+        };
+        document.addEventListener('touchstart', handler, { once: true });
+        document.addEventListener('click', handler, { once: true });
+      });
+    };
+
+    attemptPlay();
+  }, []);
+
   return (
     <section className="hero-video-section" aria-label="Hero video">
       <video
+        ref={videoRef}
         className="hero-bg-video"
         src="/assets/maya_logo.mp4"
         autoPlay
@@ -325,15 +348,15 @@ function VideoPreview({ src, title, controls = false }) {
 
   React.useEffect(() => {
     if (!videoRef.current || controls) return;
-    const play = () => videoRef.current?.play().catch(() => {});
-    play();
+    const attemptPlay = () => videoRef.current?.play().catch(() => {});
+    attemptPlay();
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) play();
+          if (entry.isIntersecting) attemptPlay();
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
     observer.observe(videoRef.current);
     return () => observer.disconnect();
