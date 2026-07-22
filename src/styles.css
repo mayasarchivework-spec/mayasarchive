@@ -263,6 +263,7 @@ main { position: relative; z-index: 1; }
   overflow: hidden;
   margin: 0;
   pointer-events: none;
+  max-height: 100vh;
 }
 
 .hero-video-section::after {
@@ -759,6 +760,11 @@ main { position: relative; z-index: 1; }
 }
 
 @media (max-width: 760px) {
+  .hero-video-section {
+    height: 50vh;
+    min-height: 320px;
+  }
+
   .section-shell,
   .site-header { width: min(calc(100% - 22px), var(--max)); }
 

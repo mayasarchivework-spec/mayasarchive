@@ -321,11 +321,30 @@ function Footer() {
 }
 
 function VideoPreview({ src, title, controls = false }) {
+  const videoRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (!videoRef.current || controls) return;
+    const play = () => videoRef.current?.play().catch(() => {});
+    play();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) play();
+        });
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(videoRef.current);
+    return () => observer.disconnect();
+  }, [src, controls]);
+
   if (!src || typeof src !== 'string') return null;
   const isImage = /\.(png|jpe?g|gif|webp|avif|svg)(\?|$)/i.test(src);
   if (isImage) return <img src={src} alt={title} draggable="false" />;
   return (
     <video
+      ref={videoRef}
       aria-label={title}
       autoPlay={!controls}
       controls={controls}
@@ -336,7 +355,7 @@ function VideoPreview({ src, title, controls = false }) {
       loop
       muted
       playsInline
-      preload="metadata"
+      preload="auto"
       src={src}
     />
   );
