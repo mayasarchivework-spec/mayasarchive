@@ -14,7 +14,7 @@ export const profile = {
     'I make motion that sells for startups and apps.',
     'I also build product visuals, interface concepts, and little brand systems when the idea needs a fuller world around it.',
   ],
-  roles: ['Motion Designer', 'Product Designer', '3D Artist'],
+  roles: ['Motion Designer', 'Product Designer'],
   links: [
     { label: 'Instagram', href: 'https://www.instagram.com/mayasarchive.zip/', icon: 'instagram', target: '_blank', rel: 'noopener noreferrer' },
     { label: 'TikTok', href: 'https://www.tiktok.com/@mayasarchive.zip', icon: 'tiktok', target: '_blank', rel: 'noopener noreferrer' },
