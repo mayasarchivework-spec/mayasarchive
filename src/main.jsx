@@ -74,7 +74,7 @@ function SiteChrome() {
     <header className={`site-header ${menuOpen ? 'menu-open' : ''}`}>
       <div className="site-header-inner">
         <a className="brand" href="/" aria-label="Maya's Archive home">
-          <img src="/assets/maya-profile.jpg" alt="Maya" className="brand-avatar" />  
+          <img src="/assets/mayasarchive-icon-transparent.png" alt="Maya" className="brand-avatar" />  
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="/work">projects</a>
