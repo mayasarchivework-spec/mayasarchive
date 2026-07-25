@@ -179,7 +179,7 @@ function BentoArchive() {
         </div>
 
         <div className="bento-card bento-flower reveal delay-2">
-          <img src="/assets/blue-flower.png" alt="Blue textile flower" />
+          <img src="/assets/blue-texture-flower.png" alt="Blue textile flower" />
         </div>
 
         <div className="bento-card bento-services reveal delay-1">
