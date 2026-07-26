@@ -12,11 +12,11 @@
   --red: #a91f2b;
   --red-bright: #d64951;
   --pink: #ec9fbe;
-  --purple: #ffd4e5;
+  --purple: #f74d52;
   --cream: #efe2c6;
   --mustard: #dbb94d;
   --blush: #ff456d;
-  --acid: ##8FFE09
+  --acid: ##8FFE09;
   --max: 1260px;
   color: var(--text);
   font-family: 'DM Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -172,12 +172,10 @@ main { min-height: 60vh; overflow: clip; }
 .category-selector span { color: var(--acid); font-size: 0.56rem; }
 .archive-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
 .project-card { display: block; overflow: hidden; border: 1px solid var(--line-soft); border-radius: 24px; background: var(--surface); transition: border-color 220ms ease; }
-.project-card:hover { border-color: #ff456d; }
 .project-card:nth-child(3n + 2) { margin-top: 75px; }
 .project-card:nth-child(3n + 3) { margin-top: 140px; }
 .project-card-media { overflow: hidden; background: #262626; }
 .project-card-media img, .project-card-media video { width: 100%; height: auto; display: block; transition: transform 550ms cubic-bezier(0.22,1,0.36,1); }
-.project-card:hover .project-card-media img, .project-card:hover .project-card-media video { transform: scale(1.045); }
 .project-card-body { position: relative; min-height: 190px; padding: 21px 22px 25px; }
 .project-card-meta { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 19px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.61rem; letter-spacing: 0.04em; text-transform: uppercase; }
 .project-card-body h2 { max-width: 12ch; margin-bottom: 10px; font-size: clamp(1.7rem, 2.8vw, 2.7rem); font-weight: 800; letter-spacing: -0.09em; line-height: 0.82; }
