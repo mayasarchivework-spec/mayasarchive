@@ -36,6 +36,23 @@ export const projects = [
     featured: true,
     tone: 'lavender',
   },
+    {
+    id: 'THE',
+    slug: 'theditingco',
+    title: 'theditingco web design',
+    kicker: 'web design',
+    category: 'product',
+    description: '',
+    summary: 'Portfolio/website designed for theditingco',
+    thumbnail: '/assets/the-banner.png',
+    media: ['/assets/the-full-breakdown.png'],
+    tools: ['react.js, typescript, next.js, css'],
+    skills: ['web design'],
+    externalUrl: 'https://theditingcompany.vercel.app/',
+    featured: true,
+    tone: 'lavender',
+  },
+  
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
