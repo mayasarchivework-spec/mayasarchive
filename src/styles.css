@@ -171,7 +171,7 @@ main { min-height: 60vh; overflow: hidden; }
 .category-selector span { color: var(--acid); font-size: 0.56rem; }
 .archive-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
 .project-card { display: block; overflow: hidden; border: 1px solid var(--line-soft); border-radius: 24px; background: var(--surface); transition: border-color 220ms ease; }
-.project-card:hover { border-color: rgba(212,255,69,0.45); }
+.project-card:hover { border-color: rgba: #ff456d; }
 .project-card:nth-child(3n + 2) { margin-top: 75px; }
 .project-card:nth-child(3n + 3) { margin-top: 140px; }
 .project-card-media { overflow: hidden; background: #262626; }
