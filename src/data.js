@@ -36,7 +36,7 @@ export const projects = [
     featured: true,
     tone: 'lavender',
   },
-    {
+  {
     id: 'THE',
     slug: 'theditingco',
     title: 'theditingco web design',
@@ -52,7 +52,22 @@ export const projects = [
     featured: true,
     tone: 'lavender',
   },
-  
+    {
+    id: 'edithub',
+    slug: 'edithub',
+    title: 'edithub web design',
+    kicker: 'web design',
+    category: 'product',
+    description: '',
+    summary: 'realised a lot of editors want a marketplace to get scenepacks and editing assets so i made one',
+    thumbnail: '/assets/edithub-banner.png',
+    media: ['/assets/edithub-full-breakdown.png'],
+    tools: ['react.js, typescript, next.js, css'],
+    skills: ['web design, product design'],
+    externalUrl: 'https://edithub-roan.vercel.app/',
+    featured: true,
+    tone: 'lavender',
+  },
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
