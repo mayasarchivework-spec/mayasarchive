@@ -12,7 +12,7 @@
   --red: #a91f2b;
   --red-bright: #d64951;
   --pink: #ec9fbe;
-  --purple: #bca3eb;
+  --purple: #ffd4e5;
   --cream: #efe2c6;
   --mustard: #dbb94d;
   --blush: #ff456d;
@@ -84,9 +84,9 @@ main { min-height: 60vh; overflow: clip; }
 .hero-block-d { top: 25%; right: 8.33%; width: 16.66%; height: 50%; background: var(--blush); }
 .hero-block-e { bottom: 0; left: 0; width: 16.66%; height: 25%; background: var(--red); }
 .hero-block-f { bottom: 0; left: 41.66%; width: 25%; height: 25%; background: var(--pink); }
-.hero-block-g { bottom: 0; right: 0; width: 33.33%; height: 50%; background: #b4ffa1; }
+.hero-block-g { bottom: 0; right: 0; width: 33.33%; height: 50%; background: var(--red); }
 .hero-block-h { top: 0; left: 50%; width: 8.33%; height: 25%; background: var(--blush); }
-.hero-block-i { top: 50%; left: 0; width: 16.66%; height: 25%; background: #b4ffa1; }
+.hero-block-i { top: 50%; left: 0; width: 16.66%; height: 25%; background: var(--red); }
 .hero-orbit { position: absolute; border: 1px solid rgba(17,17,17,0.68); border-radius: 50%; transform: rotate(-20deg); animation: orbit-drift 12s ease-in-out infinite alternate; }
 .hero-orbit-a { top: 19%; left: 30%; width: 46%; height: 43%; }
 .hero-orbit-b { top: 8%; left: 39%; width: 30%; height: 66%; transform: rotate(28deg); animation-delay: -3s; }
