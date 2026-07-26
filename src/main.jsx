@@ -258,6 +258,7 @@ function ProjectPage({ project }) {
             <MetaList label="Role" items={project.skills} />
             <MetaList label="Toolkit" items={project.tools} />
             <a className="button button-red project-detail-cta" href={CONTACT_URL}>Start a conversation <ArrowUpRight size={15} /></a>
+            <a className="button button-red project-detail-cta" href={project.externalUrl}>View project<ArrowUpRight size={15} /></a>
           </div>
         </aside>
       </div>
