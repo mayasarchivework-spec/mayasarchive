@@ -189,7 +189,7 @@ main { min-height: 60vh; overflow: hidden; }
 .project-detail { padding-top: 134px; padding-bottom: 170px; padding-left: 20px; padding-right: 20px; }
 .back-link { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 45px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase; }
 .back-link:hover { color: var(--acid); }
-.project-detail-layout { display: flex; gap: 50px; align-items: flex-start; }
+.project-detail-layout { display: flex; gap: 50px; }
 .project-detail-media { flex: 1; min-width: 0; display: grid; gap: 18px; }
 .project-detail-media-item { overflow: hidden; border-radius: 28px; background: var(--surface); }
 .project-detail-media-item img,
