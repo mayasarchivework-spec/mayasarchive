@@ -22,6 +22,21 @@ export const profile = {
 
 export const projects = [
   {
+    id: 'spotify-music-ad',
+    slug: 'spotify-music-ad',
+    title: 'spotify music x doja cat',
+    kicker: 'social media ad',
+    category: 'motion',
+    description: '',
+    summary: 'concept ad i made for spotify music',
+    thumbnail: '/assets/Spotify-Music-Ad.mp4',
+    media: ['/assets/Spotify-Music-Ad.mp4'],
+    tools: ['After Effects'],
+    skills: ['Motion design'],
+    featured: true,
+    tone: 'lavender',
+  },
+  {
     id: 'luminate',
     slug: 'luminate',
     title: 'Luminate ad',
@@ -33,7 +48,7 @@ export const projects = [
     media: ['/assets/luminate-ad-2.mp4'],
     tools: ['After Effects'],
     skills: ['Motion design'],
-    featured: true,
+    featured: false,
     tone: 'lavender',
   },
   {
