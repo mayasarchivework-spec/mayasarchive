@@ -162,9 +162,9 @@ function BentoArchive() {
           <div className="card-media"><img src="/assets/openforwork.png" alt="Open for work collage" /></div>
         </div>
 
-        <a className="bento-card bento-movesync bento-featured-wide reveal delay-1" href="/luminate">
-          <div className="card-media"><MediaPreview src="/assets/luminate-ad-2.mp4" title="luminate" /></div>
-          <div className="card-topline light"><span>luminate ad</span><ArrowUpRight size={18} /></div>
+        <a className="bento-card bento-movesync bento-featured-wide reveal delay-1" href="/Spotify-Music-Ad">
+          <div className="card-media"><MediaPreview src="/assets/Spotify-Music-Ad.mp4" title="spotify music x dojacat" /></div>
+          <div className="card-topline light"><span>spotify music x dojacat</span><ArrowUpRight size={18} /></div>
         </a>
 
         <div className="bento-card bento-about reveal delay-2" id="about">
