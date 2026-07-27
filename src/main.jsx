@@ -13,6 +13,7 @@ import {
   Sparkles,
   Star,
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import './styles.css';
 import { CATEGORIES, CONTACT_URL, featuredProject, profile, projects } from './data';
 
@@ -49,6 +50,7 @@ function App() {
       <SiteChrome />
       <main>{page}</main>
       <Footer />
+      <Analytics />
     </>
   );
 }
