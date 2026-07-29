@@ -209,7 +209,7 @@ function WorkPage() {
         <p>Ideas in progress, shipped work, and experiments that taught me something useful.</p>
       </div>
       <div className="category-selector reveal delay-1" role="tablist" aria-label="Work categories">
-        <button className={activeCategory === 'all' ? 'is-active' : ''} onClick={() => setActiveCategory('all')} role="tab" aria-selected={activeCategory === 'all'}>All work <span>01</span></button>
+        <button className={activeCategory === 'all' ? 'is-active' : ''} onClick={() => setActiveCategory('all')} role="tab" aria-selected={activeCategory === 'all'}>All work</button>
         {CATEGORIES.map((category) => {
           const count = projects.filter((project) => project.category === category.id).length;
           return <button key={category.id} className={activeCategory === category.id ? 'is-active' : ''} onClick={() => setActiveCategory(category.id)} role="tab" aria-selected={activeCategory === category.id}>{category.label} <span>{String(count).padStart(2, '0')}</span></button>;
