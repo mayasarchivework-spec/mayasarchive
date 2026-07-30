@@ -17,7 +17,7 @@ export const profile = {
     { label: 'Instagram', href: 'https://www.instagram.com/mayasarchive.zip/', icon: 'instagram' },
     { label: 'TikTok', href: 'https://www.tiktok.com/@mayasarchive.zip', icon: 'tiktok' },
     { label: 'email', href: 'mailto:mayasarchive.work@gmail.com', icon: 'mail' },
-    { label: 'X', href: 'https://x.com/mayasarchivezip', icon: 'X' },
+    { label: 'threads', href: 'https://www.threads.com/@mayasarchive.zip', icon: 'threads' },
   ],
 };
 
