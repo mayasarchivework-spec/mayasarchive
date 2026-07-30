@@ -182,7 +182,6 @@ function BentoArchive() {
           <div className="card-topline"><span>What I do</span></div>
           <ul className="service-list">
             <li><span>01</span> Motion design <Asterisk size={16} /></li>
-            <li><span>02</span> product design <Asterisk size={16} /></li>
           </ul>
           <a href="/work"><div className="red-arrow"><ArrowUpRight size={35} /></div></a>
         </div>
