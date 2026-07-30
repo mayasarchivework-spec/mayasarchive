@@ -25,7 +25,7 @@ export const projects = [
     {
     id: 'arc-browser',
     slug: 'arc-browser',
-    title: 'arc browser motion design concept ad',
+    title: 'arc browser',
     kicker: 'motion design',
     category: 'motion',
     description: '',
