@@ -160,9 +160,9 @@ function BentoArchive() {
         <div className="bento-grid">
 
 
-        <a className="bento-card bento-movesync bento-featured-wide reveal delay-1" href="/arc-browser">
-          <div className="card-media"><MediaPreview src="/assets/Arc-Browser-Ad.mp4" title="arc browser concept ad" /></div>
-          <div className="card-topline light"><span>arc browser concept ad</span><ArrowUpRight size={18} /></div>
+        <a className="bento-card bento-movesync bento-featured-wide reveal delay-1" href="/spotify-music-ad">
+          <div className="card-media"><MediaPreview src="/assets/Spotify-Music-Ad.mp4" title="spotify X doja cat" /></div>
+          <div className="card-topline light"><span>spotify X doja cat</span><ArrowUpRight size={18} /></div>
         </a>
 
         <div className="bento-card bento-about reveal delay-2" id="about">
