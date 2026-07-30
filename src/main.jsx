@@ -157,10 +157,6 @@ function Hero() {
 function BentoArchive() {
   return (
     <section className="bento-section site-shell" id="archive">
-      <div className="bento-grid">
-        <div className="bento-card bento-open reveal">
-          <div className="card-media"><img src="/assets/openforwork.png" alt="Open for work collage" /></div>
-        </div>
 
         <a className="bento-card bento-movesync bento-featured-wide reveal delay-1" href="/spotify-music-ad">
           <div className="card-media"><MediaPreview src="/assets/Spotify-Music-Ad.mp4" title="spotify music x dojacat" /></div>
