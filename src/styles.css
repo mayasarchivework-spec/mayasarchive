@@ -125,7 +125,7 @@ main { min-height: 60vh; overflow: clip; }
 .bento-services { grid-column: span 5; min-height: 275px; padding: 25px; background: var(--blush); color: var(--bg); }
 .bento-red { grid-column: span 4; min-height: 305px; padding: 25px; background: var(--red); }
 .card-media { position: absolute; inset: 0; overflow: hidden; background: #ddd; }
-.card-media img, .card-media video { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1); }
+.card-media img, .card-media video { width: 120%; height: 100%; object-fit: cover; transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1); }
 .card-media-video video { object-position: center; }
 .card-topline { position: absolute; top: 21px; right: 22px; left: 22px; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-family: 'DM Mono', monospace; font-size: 0.63rem; letter-spacing: 0.04em; text-transform: uppercase; }
 .card-topline.light, .light { color: var(--text); }
