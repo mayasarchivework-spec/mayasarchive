@@ -117,7 +117,7 @@ main { min-height: 60vh; overflow: clip; }
 .bento-card { position: relative; min-width: 0; overflow: hidden; border: 1px solid var(--line-soft); border-radius: 27px; color: var(--text); background: var(--surface); }
 .bento-card:hover .card-media video { transform: scale(1.045); }
 .bento-open { grid-column: span 7; grid-row: span 2; min-height: 0; aspect-ratio: 1 / 1; background: #291d22; }
-.bento-movesync { grid-column: span 6; min-height: 0; color: var(--text); background: var(--purple); }
+.bento-movesync { grid-column: span 6; min-height: 0; color: var(--text); background: var(--purple); object-fit: cover; object-position: center; }
 .bento-featured-wide { aspect-ratio: 16 / 9; }
 .bento-about { grid-column: span 6; min-height: 298px; padding: 25px; background: var(--surface-2); }
 .bento-tools { grid-column: span 6; min-height: 275px; padding: 25px; background: var(--cream); color: var(--bg); }
