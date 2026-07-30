@@ -37,7 +37,7 @@ export const projects = [
     featured: true,
     tone: 'lavender',
   },
-  {
+  /*{
     id: 'spotify-music-ad',
     slug: 'spotify-music-ad',
     title: 'spotify music x doja cat',
@@ -51,7 +51,7 @@ export const projects = [
     skills: ['Motion design'],
     featured: true,
     tone: 'lavender',
-  },
+  },*/
   {
     id: 'THE',
     slug: 'theditingco',
