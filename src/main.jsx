@@ -178,10 +178,6 @@ function BentoArchive() {
           <div className="tools-asterisk">*</div>
         </div>
 
-        <div className="bento-card bento-flower reveal delay-2">
-          <img src="/assets/blue-textile-flower.png" alt="Blue textile flower" />
-        </div>
-
         <div className="bento-card bento-services reveal delay-1">
           <div className="card-topline"><span>What I do</span></div>
           <ul className="service-list">
