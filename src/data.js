@@ -11,7 +11,7 @@ export const profile = {
   name: "Maya's Archive",
   shortName: 'Maya',
   location: 'Glasgow, UK',
-  bio: "I'm a solo designer making expressive motion and thoughtful products, with the goal to add my own piece of creativity to the the digital world.",
+  bio: "I'm a solo designer making expressive motion and thoughtful products, with the goal to add my own piece of creativity to the digital world.",
   roles: ['Product designer', 'Motion designer'],
   links: [
     { label: 'Instagram', href: 'https://www.instagram.com/mayasarchive.zip/', icon: 'instagram' },
