@@ -51,7 +51,7 @@ export const projects = [
     featured: true,
     tone: 'lavender',
   },
-/*  {
+  {
     id: 'THE',
     slug: 'theditingco',
     title: 'theditingco web design',
@@ -66,7 +66,7 @@ export const projects = [
     externalUrl: 'https://theditingcompany.vercel.app/',
     featured: true,
     tone: 'lavender',
-  },*/
+  },
   {
     id: 'luminate',
     slug: 'luminate',
@@ -85,14 +85,14 @@ export const projects = [
     {
     id: 'edithub',
     slug: 'edithub',
-    title: 'edithub web design',
+    title: 'edithub product design',
     kicker: 'web design',
     category: 'product',
     description: '',
     summary: 'realised a lot of editors want a marketplace to get scenepacks and editing assets so i made one',
     thumbnail: '/assets/edithub-banner.png',
     media: ['/assets/edithub-full-breakdown.png'],
-    tools: ['react.js, typescript, next.js, css'],
+    tools: ['typescript, next.js, framer'],
     skills: ['web design, product design'],
     externalUrl: 'https://edithub-roan.vercel.app/',
     featured: true,
@@ -108,7 +108,7 @@ export const projects = [
     summary: 'a content planner/ to-do list to help stay organised',
     thumbnail: '/assets/lime-thumbnail.png',
     media: ['/assets/lime-thumbnail.png', '/assets/lime-problem.png', '/assets/logo-references.png', '/assets/logo-breakdown.png', '/assets/lime-ui.png'],
-    tools: ['react.js, typescript, next.js, css'],
+    tools: ['affinity, framer'],
     skills: ['ui design, product design, user research'],
     featured: true,
     tone: 'lavender',
