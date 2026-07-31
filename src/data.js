@@ -98,6 +98,21 @@ export const projects = [
     featured: true,
     tone: 'lavender',
   },
+  {
+    id: 'lime',
+    slug: 'lime',
+    title: 'lime product design',
+    kicker: 'product design',
+    category: 'product',
+    description: '',
+    summary: 'a content planner/ to-do list to help stay organised',
+    thumbnail: '/assets/lime-thumbnail.png',
+    media: ['/assets/lime-thumbnail.png', '/assets/lime-problem.png', '/assets/logo-references.png', '/assets/logo-breakdown.png', '/assets/lime-ui.png'],
+    tools: ['react.js, typescript, next.js, css'],
+    skills: ['ui design, product design, user research'],
+    featured: true,
+    tone: 'lavender',
+  },
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
