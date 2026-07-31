@@ -94,7 +94,7 @@ export const projects = [
     media: ['/assets/edithub-full-breakdown.png'],
     tools: ['typescript, next.js, framer'],
     skills: ['web design, product design'],
-    externalUrl: 'https://edithub-roan.vercel.app/',
+    externalUrl: 'https://github.com/mayasarchivework-spec/edithub',
     featured: true,
     tone: 'lavender',
   },
