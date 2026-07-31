@@ -31,7 +31,7 @@ export const projects = [
     summary: 'concept ad i made for arc browser, while learning how to make more fast paced work',
     thumbnail: '/assets/Arc-Browser-Ad.mp4',
     media: ['/assets/Arc-Browser-Ad.mp4'],
-    tools: ['after effects'],
+    tools: ['after effects, affinity'],
     skills: ['motion design'],
     featured: true,
     tone: 'lavender',
