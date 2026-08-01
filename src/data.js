@@ -117,7 +117,7 @@ export const projects = [
     id: 'lime',
     slug: 'lime',
     title: 'lime product design',
-    kicker: 'product design',
+    kicker: 'ui design',
     category: 'product',
     description: '',
     summary: 'a content planner/ to-do list to help stay organised',
