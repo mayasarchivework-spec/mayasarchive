@@ -22,6 +22,21 @@ export const profile = {
 
 export const projects = [
     {
+    id: 'okay',
+    slug: 'okayy',
+    title: 'okay promo video',
+    kicker: 'motion design',
+    category: 'motion',
+    description: '',
+    summary: '3d practice for a concept teaser music promo video, using blender for modeling and aftereffects for compositing',
+    thumbnail: '/assets/Okay-Promo.mp4',
+    media: ['/assets/Okay-Promo.mp4'],
+    tools: ['after effects, blender'],
+    skills: ['motion design'],
+    featured: true,
+    tone: 'lavender',
+  },
+  {
     id: 'arc-browser',
     slug: 'arc-browser',
     title: 'arc browser',
