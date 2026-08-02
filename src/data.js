@@ -21,7 +21,7 @@ export const profile = {
 };
 
 export const projects = [
-    {
+    /*{
     id: 'okay',
     slug: 'okayy',
     title: 'okay promo video',
@@ -35,7 +35,7 @@ export const projects = [
     skills: ['motion design'],
     featured: true,
     tone: 'lavender',
-  },
+  },*/
   {
     id: 'arc-browser',
     slug: 'arc-browser',
