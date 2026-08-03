@@ -21,21 +21,6 @@ export const profile = {
 };
 
 export const projects = [
-    /*{
-    id: 'okay',
-    slug: 'okayy',
-    title: 'okay promo video',
-    kicker: 'social media ad',
-    category: 'motion',
-    description: '',
-    summary: '3d practice for a concept teaser music promo video, using blender for modeling and aftereffects for compositing',
-    thumbnail: '/assets/Okay-Promo.mp4',
-    media: ['/assets/Okay-Promo.mp4'],
-    tools: ['after effects, blender'],
-    skills: ['motion design'],
-    featured: true,
-    tone: 'lavender',
-  },*/
   {
     id: 'arc-browser',
     slug: 'arc-browser',
@@ -51,21 +36,6 @@ export const projects = [
     featured: true,
     tone: 'lavender',
   },
-/*{
-    id: 'spotify-music-ad',
-    slug: 'spotify-music-ad',
-    title: 'spotify music x doja cat',
-    kicker: 'social media ad',
-    category: 'motion',
-    description: '',
-    summary: 'concept ad i made for spotify music',
-    thumbnail: '/assets/Spotify-Music-Ad.mp4',
-    media: ['/assets/Spotify-Music-Ad.mp4'],
-    tools: ['After Effects'],
-    skills: ['Motion design'],
-    featured: true,
-    tone: 'lavender',
-  },*/
   {
     id: 'THE',
     slug: 'theditingco',
