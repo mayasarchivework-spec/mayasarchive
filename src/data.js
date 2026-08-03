@@ -83,21 +83,6 @@ export const projects = [
     featured: true,
     tone: 'lavender',
   },
-  {
-    id: 'lime',
-    slug: 'lime',
-    title: 'lime product design',
-    kicker: 'ui design',
-    category: 'product',
-    description: '',
-    summary: 'a content planner/ to-do list to help stay organised',
-    thumbnail: '/assets/lime-thumbnail.png',
-    media: ['/assets/lime-breakdown.png'],
-    tools: ['affinity, framer'],
-    skills: ['ui design, product design, user research'],
-    featured: true,
-    tone: 'lavender',
-  },
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
