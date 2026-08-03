@@ -92,7 +92,7 @@ export const projects = [
     description: '',
     summary: 'a content planner/ to-do list to help stay organised',
     thumbnail: '/assets/lime-thumbnail.png',
-    media: ['/assets/lime-thumbnail.png', '/assets/lime-problem.png', '/assets/logo-references.png', '/assets/logo-breakdown.png', '/assets/lime-ui.png', '/assets/lime-splashscreen.gif'],
+    media: ['/assets/lime-breakdown.png'],
     tools: ['affinity, framer'],
     skills: ['ui design, product design, user research'],
     featured: true,
