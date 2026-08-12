@@ -13,6 +13,7 @@ import {
   Sparkles,
   Star,
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import './styles.css';
 import { CATEGORIES, CONTACT_URL, featuredProject, profile, projects } from './data';
 
@@ -49,6 +50,7 @@ function App() {
       <SiteChrome />
       <main>{page}</main>
       <Footer />
+      <Analytics />
     </>
   );
 }
@@ -74,7 +76,7 @@ function SiteChrome() {
     <header className={`site-header ${menuOpen ? 'menu-open' : ''}`}>
       <div className="site-header-inner">
         <a className="brand" href="/" aria-label="Maya's Archive home">
-          <img src="/assets/maya-profile.jpg" alt="Maya" className="brand-avatar" />  
+          <img src="/assets/mayasarchive-icon-transparent.png" alt="Maya" className="brand-avatar" />  
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="/work">projects</a>
@@ -155,13 +157,11 @@ function Hero() {
 function BentoArchive() {
   return (
     <section className="bento-section site-shell" id="archive">
-      <div className="bento-grid">
-        <div className="bento-card bento-open reveal">
-          <div className="card-media"><img src="/assets/openforwork.png" alt="Open for work collage" /></div>
-        </div>
+        <div className="bento-grid">
+
 
         <a className="bento-card bento-movesync bento-featured-wide reveal delay-1" href="/luminate">
-          <div className="card-media"><MediaPreview src="/assets/luminate-ad-2.mp4" title="luminate" /></div>
+          <div className="card-media"><MediaPreview src="/assets/luminate-ad-2.mp4" title="luminate ad" /></div>
           <div className="card-topline light"><span>luminate ad</span><ArrowUpRight size={18} /></div>
         </a>
 
@@ -173,20 +173,16 @@ function BentoArchive() {
         </div>
 
         <div className="bento-card bento-tools reveal delay-1">
-          <div className="card-topline"><span>Tools/techstack</span></div>
+          <div className="card-topline"><span>Tools/skills</span></div>
           <div className="tool-list"><span>Framer</span><span>After Effects</span><span>affinity</span><span>react</span><span>Blender</span><span>next.js</span><span>Typescript</span></div>
           <div className="tools-asterisk">*</div>
         </div>
 
-        <div className="bento-card bento-flower reveal delay-2">
-          <img src="/assets/blue-flower.png" alt="Blue textile flower" />
-        </div>
-
         <div className="bento-card bento-services reveal delay-1">
-          <div className="card-topline"><span>What I do</span></div>
+          <div className="card-topline"><span>What I do...</span></div>
           <ul className="service-list">
             <li><span>01</span> Motion design <Asterisk size={16} /></li>
-            <li><span>02</span> product design <Asterisk size={16} /></li>
+            <li><span>02</span> Product design <Asterisk size={16} /></li>  
           </ul>
           <a href="/work"><div className="red-arrow"><ArrowUpRight size={35} /></div></a>
         </div>
@@ -207,7 +203,7 @@ function WorkPage() {
         <p>Ideas in progress, shipped work, and experiments that taught me something useful.</p>
       </div>
       <div className="category-selector reveal delay-1" role="tablist" aria-label="Work categories">
-        <button className={activeCategory === 'all' ? 'is-active' : ''} onClick={() => setActiveCategory('all')} role="tab" aria-selected={activeCategory === 'all'}>All work <span>06</span></button>
+        <button className={activeCategory === 'all' ? 'is-active' : ''} onClick={() => setActiveCategory('all')} role="tab" aria-selected={activeCategory === 'all'}>All work</button>
         {CATEGORIES.map((category) => {
           const count = projects.filter((project) => project.category === category.id).length;
           return <button key={category.id} className={activeCategory === category.id ? 'is-active' : ''} onClick={() => setActiveCategory(category.id)} role="tab" aria-selected={activeCategory === category.id}>{category.label} <span>{String(count).padStart(2, '0')}</span></button>;
@@ -258,6 +254,10 @@ function ProjectPage({ project }) {
             <MetaList label="Role" items={project.skills} />
             <MetaList label="Toolkit" items={project.tools} />
             <a className="button button-red project-detail-cta" href={CONTACT_URL}>Start a conversation <ArrowUpRight size={15} /></a>
+            {project.externalUrl && (
+              <a className="button button-red project-detail-cta" href={project.externalUrl}>View project<ArrowUpRight size={15} /></a>
+            )}
+
           </div>
         </aside>
       </div>
