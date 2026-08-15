@@ -160,29 +160,31 @@ function BentoArchive() {
         <div className="bento-grid">
 
 
-        <a className="bento-card bento-movesync bento-featured-wide reveal delay-1" href="/luminate">
-          <div className="card-media"><MediaPreview src="/assets/luminate-ad-2.mp4" title="luminate ad" /></div>
-          <div className="card-topline light"><span>luminate ad</span><ArrowUpRight size={18} /></div>
+        <a className="bento-card bento-movesync bento-featured-wide reveal delay-1" href="/squarespace-ad">
+          <div className="card-media"><MediaPreview src="/assets/Squarespace-ad.mp4" title="squarespace ad" /></div>
+          <div className="card-topline light"><span>squarespace ad</span><ArrowUpRight size={18} /></div>
         </a>
 
         <div className="bento-card bento-about reveal delay-2" id="about">
           <span className="card-kicker">About me</span>
           <h3>I love to<em>create.</em></h3>
-          <p>Self-taught motion designer, i love expressing my creatity through smooth animations. I also love creating and designing products that fit the needs of the developer and consumer from first ideas to launch</p>
+          <p> Hi, I’m Maya. I’m a self-taught motion and product designer who brings static ideas to life.By day, I craft high-energy, 2D social media ads that stop the scroll. By night, motion design is my playground for pure creative expression. Beyond the screen, I design functional digital products—taking them from a messy first sketch all the way to a developer-ready launch. </p>
           <a className="text-link" href="/work">View my work <ArrowUpRight size={15} /></a>
         </div>
 
         <div className="bento-card bento-tools reveal delay-1">
-          <div className="card-topline"><span>Tools/skills</span></div>
-          <div className="tool-list"><span>Framer</span><span>After Effects</span><span>affinity</span><span>react</span><span>Blender</span><span>next.js</span><span>Typescript</span></div>
+          <div className="card-topline"><span>Tools kit</span></div>
+          <div className="tool-list"><span>Affinity • Design</span><span>After Effects • Motion</span><span>Framer • UI/UX</span><span>React / Next.js • Frontend</span><span>Blender • 3D</span></div>
           <div className="tools-asterisk">*</div>
         </div>
 
         <div className="bento-card bento-services reveal delay-1">
           <div className="card-topline"><span>What I do...</span></div>
           <ul className="service-list">
-            <li><span>01</span> Motion design <Asterisk size={16} /></li>
-            <li><span>02</span> Product design <Asterisk size={16} /></li>  
+            <li><span>01</span> 2D Motion design → what i do best <Asterisk size={16} /></li>
+            <li><span>02</span> Product design → what i do best <Asterisk size={16} /></li>  
+            <li><span>02</span> 3D design → Intermediate <Asterisk size={16} /></li>
+            <li><span>02</span> UI/UX design → Intermediate <Asterisk size={16} /></li>
           </ul>
           <a href="/work"><div className="red-arrow"><ArrowUpRight size={35} /></div></a>
         </div>
