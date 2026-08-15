@@ -185,6 +185,7 @@ function BentoArchive() {
             <li><span>02</span> Product design → what i do best <Asterisk size={16} /></li>  
             <li><span>03</span> 3D design → Intermediate <Asterisk size={16} /></li>
             <li><span>04</span> UI/UX design → Intermediate <Asterisk size={16} /></li>
+            <li><span>05</span> Frontend Eng → Intermediate <Asterisk size={16} /></li>
           </ul>
         </div>
       </div>
