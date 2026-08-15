@@ -83,6 +83,22 @@ export const projects = [
     featured: true,
     tone: 'lavender',
   },
+  
+    {
+    id: 'squarespace ad',
+    slug: 'squarespace-ad',
+    title: 'squarespace concept ad',
+    kicker: 'motion design',
+    category: 'motion',
+    description: '',
+    summary: 'kinetic motion design ad i made for squarespace - concept work',
+    thumbnail: '/assets/Squarespace-ad.mp4',
+    media: ['/assets/Squarespace-ad.mp4'],
+    tools: ['aftereffects'],
+    skills: ['motion design'],
+    featured: true,
+    tone: 'lavender',
+  },
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
