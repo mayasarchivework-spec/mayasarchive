@@ -174,7 +174,7 @@ function BentoArchive() {
 
         <div className="bento-card bento-tools reveal delay-1">
           <div className="card-topline"><span>Tools kit</span></div>
-          <div className="tool-list"><span>Affinity • Design</span><span>After Effects • Motion</span><span>Framer • UI/UX</span><span>React / Next.js • Frontend</span><span>Blender • 3D</span></div>
+          <div className="tool-list"><span>Affinity • Design</span><span>After Effects • Motion design</span><span>Framer • UI/UX design</span><span>React / Next.js • Frontend Eng</span><span>Blender • 3D Design</span></div>
           <div className="tools-asterisk">*</div>
         </div>
 
@@ -183,10 +183,9 @@ function BentoArchive() {
           <ul className="service-list">
             <li><span>01</span> 2D Motion design → what i do best <Asterisk size={16} /></li>
             <li><span>02</span> Product design → what i do best <Asterisk size={16} /></li>  
-            <li><span>02</span> 3D design → Intermediate <Asterisk size={16} /></li>
-            <li><span>02</span> UI/UX design → Intermediate <Asterisk size={16} /></li>
+            <li><span>03</span> 3D design → Intermediate <Asterisk size={16} /></li>
+            <li><span>04</span> UI/UX design → Intermediate <Asterisk size={16} /></li>
           </ul>
-          <a href="/work"><div className="red-arrow"><ArrowUpRight size={35} /></div></a>
         </div>
       </div>
     </section>
