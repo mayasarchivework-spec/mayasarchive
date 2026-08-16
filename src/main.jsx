@@ -285,7 +285,7 @@ function Footer() {
         <div className="footer-topline"><span>Have a good idea?</span><a href={CONTACT_URL}>Let's make it real <ArrowUpRight size={16} /></a></div>
         <div className="footer-socials"><span className="section-label"></span><div>{profile.links.map((link) => <a key={link.label} href={link.href} target={link.href.startsWith('mailto') ? undefined : '_blank'} rel={link.href.startsWith('mailto') ? undefined : 'noreferrer'}>{link.label}</a>)}</div></div>
         <div className="footer-word">mayasarchive</div>
-        <div className="footer-bottom"><span>© 2026 Maya's Archive</span><span>Made with curiosity in Glasgow</span></div>
+        <div className="footer-bottom"><span>© 2026 Maya's Archive All rights reserves</span><span>Made with curiosity in the UK</span></div>
       </div>
     </footer>
   );
