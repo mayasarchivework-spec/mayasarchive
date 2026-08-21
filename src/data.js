@@ -80,6 +80,7 @@ export const projects = [
     media: ['/assets/luminate-ad-2.mp4'],
     tools: ['After Effects'],
     skills: ['Motion design'],
+    externalUrl: 'https://www.instagram.com/reel/DZn6Z5FIsIR/',
     featured: false,
     tone: 'lavender',
   },
