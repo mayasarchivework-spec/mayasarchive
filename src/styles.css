@@ -176,8 +176,6 @@ main { min-height: 60vh; overflow: clip; }
 .category-selector span { color: var(--acid); font-size: 0.56rem; }
 .archive-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
 .project-card { display: block; overflow: hidden; border: 1px solid var(--line-soft); border-radius: 24px; background: var(--surface); transition: border-color 220ms ease; }
-.project-card:nth-child(3n + 2) { margin-top: 75px; }
-.project-card:nth-child(3n + 3) { margin-top: 140px; }
 .project-card-media { overflow: hidden; background: #262626; }
 .project-card-media img, .project-card-media video { width: 100%; height: auto; display: block; transition: transform 550ms cubic-bezier(0.22,1,0.36,1); }
 .project-card-body { position: relative; min-height: 190px; padding: 21px 22px 25px; }
@@ -192,12 +190,12 @@ main { min-height: 60vh; overflow: clip; }
 .back-link { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 45px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.67rem; text-transform: uppercase; }
 .back-link:hover { color: var(--acid); }
 .enquiry-page { padding-top: 134px; padding-bottom: 150px; }
-.enquiry-intro { display: grid; gap: 24px; margin-bottom: 58px; }
+.enquiry-intro { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 40px; align-items: end; margin-bottom: 58px; }
 .enquiry-heading { display: grid; gap: 18px; }
 .enquiry-heading h1 { white-space: nowrap; font-size: clamp(3.2rem, 7.2vw, 8.5rem); font-weight: 800; letter-spacing: -0.1em; line-height: 0.86; }
 .enquiry-heading em { color: var(--blush); font-family: 'Caveat', cursive; font-weight: 600; letter-spacing: -0.05em; }
-.enquiry-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.68rem; text-transform: uppercase; }
-.enquiry-contact-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+.enquiry-contact { display: grid; justify-items: end; gap: 18px; padding-bottom: 5px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.68rem; text-transform: uppercase; }
+.enquiry-contact-actions { display: flex; flex-wrap: wrap; justify-content: end; gap: 9px; }
 .button-outline { color: var(--text); border-color: var(--line); background: transparent; }
 .button-outline:hover { color: var(--bg); border-color: var(--text); background: var(--text); }
 .tally-embed { overflow: hidden; min-height: 1606px; border-radius: 24px; padding: 24px; background: var(--surface); }
@@ -249,7 +247,7 @@ main { min-height: 60vh; overflow: clip; }
   .intro-strip { grid-template-columns: 1fr; gap: 22px; padding-top: 65px; padding-bottom: 78px; }.intro-strip p { font-size: 1.7rem; }.intro-strip .circle-link { grid-column: auto; }
   .bento-section { padding-top: 85px; padding-bottom: 105px; }.section-heading { display: block; padding-bottom: 28px; }.section-heading-note { width: 100%; margin-top: 25px; }.section-heading h2 { font-size: 4.4rem; }.bento-grid { display: grid; grid-template-columns: 1fr; gap: 11px; }.bento-card, .bento-about, .bento-tools, .bento-services, .bento-red { grid-column: auto; min-height: 300px; }.bento-open { grid-column: auto; grid-row: auto; min-height: 0; aspect-ratio: 1 / 1; }.bento-featured-wide { grid-column: auto; min-height: 0; aspect-ratio: 16 / 9; }.bento-about { min-height: 340px; }.bento-tools, .bento-services, .bento-red { min-height: 275px; }.bento-flower { grid-column: auto; min-height: 0; aspect-ratio: 1 / 1; }
   .archive-grid { grid-template-columns: 1fr; gap: 11px; }.project-card:nth-child(even), .project-card:nth-child(odd) { margin-top: 0; }.project-card-body { min-height: 175px; }
-  .project-detail { padding-top: 120px; padding-bottom: 110px; }.back-link { margin-bottom: 35px; }.enquiry-page { padding-top: 120px; padding-bottom: 100px; }.enquiry-intro { gap: 20px; margin-bottom: 40px; }.enquiry-heading h1 { white-space: normal; font-size: 4.8rem; }.enquiry-contact { gap: 12px; }.tally-embed { min-height: 1606px; border-radius: 16px; padding: 16px; }
+  .project-detail { padding-top: 120px; padding-bottom: 110px; }.back-link { margin-bottom: 35px; }.enquiry-page { padding-top: 120px; padding-bottom: 100px; }.enquiry-intro { grid-template-columns: 1fr; gap: 20px; margin-bottom: 40px; }.enquiry-heading h1 { white-space: normal; font-size: 4.8rem; }.enquiry-contact { justify-items: start; gap: 12px; }.enquiry-contact-actions { justify-content: start; }.tally-embed { min-height: 1606px; border-radius: 16px; padding: 16px; }
   .project-detail-layout { flex-direction: column; gap: 28px; }.project-detail-info { width: 100%; }.project-detail-sticky { position: static; }.project-detail-title { font-size: 3.8rem; }
   .not-found { padding-top: 155px; padding-bottom: 150px; }.not-found h1 { font-size: 6rem; }
   .footer-inner { padding-top: 25px; }.footer-topline { align-items: flex-start; flex-direction: column; gap: 17px; padding-bottom: 50px; }.footer-socials { align-items: flex-start; flex-direction: column; gap: 19px; padding: 26px 0 24px; }.footer-socials > div { gap: 12px 17px; }.footer-word { font-size: clamp(4rem, 16.5vw, 7rem); }.footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; padding-top: 25px; }

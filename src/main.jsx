@@ -41,7 +41,7 @@ function App() {
 
   let page = <NotFoundPage />;
   if (path === '/') page = <HomePage />;
-  if (path === '/work') page = <WorkPage />;
+  if (path === '/projects') page = <WorkPage />;
   if (path === '/work-with-me') page = <EnquiryPage />;
   if (project) page = <ProjectPage project={project} />;
 
@@ -80,7 +80,7 @@ function SiteChrome() {
           <img src="/assets/mayasarchive-icon-transparent.png" alt="Maya" className="brand-avatar" />  
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href="/work">projects</a>
+          <a href="/projects">projects</a>
         </nav>
         <div className="header-actions">
           <a className="button button-light header-cta" href="/work-with-me">
@@ -92,7 +92,7 @@ function SiteChrome() {
         </div>
       </div>
       <div className="mobile-nav">
-        <a href="/work" onClick={() => setMenuOpen(false)}>projects <ArrowUpRight size={14} /></a>
+        <a href="/projects" onClick={() => setMenuOpen(false)}>projects <ArrowUpRight size={14} /></a>
       </div>
     </header>
   );
@@ -186,14 +186,14 @@ function EnquiryPage() {
       <div className="enquiry-intro reveal">
         <div className="enquiry-heading">
           <h1>Have something in mind?</h1>
-          <div className="enquiry-contact">
-            <span>Let's make it real</span>
-            <span>Need something else?</span>
-          </div>
+          <span className="enquiry-note">Let's make it real</span>
         </div>
-        <div className="enquiry-contact-actions">
-          <a className="button button-red" href={CONTACT_URL}>WhatsApp <ArrowUpRight size={15} /></a>
-          <a className="button button-outline" href="mailto:mayasarchive.zip@gmail.com">Email <Mail size={15} /></a>
+        <div className="enquiry-contact">
+          <span>Need something else?</span>
+          <div className="enquiry-contact-actions">
+            <a className="button button-red" href={CONTACT_URL}>WhatsApp <ArrowUpRight size={15} /></a>
+            <a className="button button-outline" href="mailto:mayasarchive.zip@gmail.com">Email <Mail size={15} /></a>
+          </div>
         </div>
       </div>
       <div className="tally-embed reveal delay-1">
@@ -218,7 +218,7 @@ function BentoArchive() {
           <span className="card-kicker">About me</span>
           <h3>bringing my ideas to <em>life.</em></h3>
           <p> Hi, I’m Maya. I’m a self-taught motion and product designer who brings static ideas to life. By day, I craft high-energy, 2D social media ads that stop the scroll. By night, motion design is my playground for pure creative expression. Beyond the screen, I design functional digital products—taking them from a messy first sketch all the way to a developer-ready launch. </p>
-          <a className="text-link" href="/work">View my work <ArrowUpRight size={15} /></a>
+          <a className="text-link" href="/projects">View my work <ArrowUpRight size={15} /></a>
         </div>
 
         <div className="bento-card bento-tools reveal delay-1">
@@ -286,7 +286,7 @@ function ProjectPage({ project }) {
 
   return (
     <article className="project-detail site-shell">
-      <a className="back-link reveal" href="/work"><ArrowLeft size={16} /> Back to archive</a>
+      <a className="back-link reveal" href="/projects"><ArrowLeft size={16} /> Back to archive</a>
       <div className="project-detail-layout">
         <div className="project-detail-media">
           {media.map((item, index) => (
@@ -312,7 +312,7 @@ function ProjectPage({ project }) {
         </aside>
       </div>
       <section className="more-work reveal">
-        <div className="section-heading compact"><div><span className="section-label">Keep browsing</span></div><a className="text-link" href="/work">View all work <ArrowUpRight size={15} /></a></div>
+        <div className="section-heading compact"><div><span className="section-label">Keep browsing</span></div><a className="text-link" href="/projects">View all work <ArrowUpRight size={15} /></a></div>
         <div className="more-work-grid">{related.map((item, index) => <ProjectCard key={item.id} project={item} index={index} />)}</div>
       </section>
     </article>
@@ -331,7 +331,7 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-inner site-shell">
-        <div className="footer-topline"><span>Have a good idea?</span><a href={CONTACT_URL}>Let's make it real <ArrowUpRight size={16} /></a></div>
+        <div className="footer-topline"><span>Have a good idea?</span><a href="/work-with-me">Let's make it real <ArrowUpRight size={16} /></a></div>
         <div className="footer-socials"><span className="section-label"></span><div>{profile.links.map((link) => <a key={link.label} href={link.href} target={link.href.startsWith('mailto') ? undefined : '_blank'} rel={link.href.startsWith('mailto') ? undefined : 'noreferrer'}>{link.label}</a>)}</div></div>
         <div className="footer-word">mayasarchive</div>
         <div className="footer-bottom"><span>© 2026 Maya's Archive All rights reserved</span><span>Made with curiosity in the UK</span></div>

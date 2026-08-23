@@ -17,7 +17,6 @@ export const profile = {
     { label: 'Instagram', href: 'https://www.instagram.com/mayasarchive.zip/', icon: 'instagram' },
     { label: 'TikTok', href: 'https://www.tiktok.com/@mayasarchive.zip', icon: 'tiktok' },
     { label: 'threads', href: 'https://www.threads.com/@mayasarchive.zip', icon: 'threads' },
-    { label: 'X', href: 'https://x.com/mayasarchivezip', icon: 'X' },
   ],
 };
 
@@ -47,7 +46,7 @@ export const projects = [
     summary: 'Portfolio/website designed for theditingco',
     thumbnail: '/assets/the-banner.png',
     media: ['/assets/the-full-breakdown.png'],
-    tools: ['react.js, typescript, next.js, css'],
+    tools: ['framer, next.js, css'],
     skills: ['web design'],
     externalUrl: 'https://theditingcompany.vercel.app/',
     featured: true,
@@ -63,7 +62,7 @@ export const projects = [
     summary: 'realised a lot of editors want a marketplace to get scenepacks and editing assets so i made one. Concept work.',
     thumbnail: '/assets/edithub-banner.png',
     media: ['/assets/edithub-2.png', '/assets/edithub-3.png'],
-    tools: ['typescript, next.js, framer'],
+    tools: ['next.js, css, framer'],
     skills: ['web design, product design'],
     externalUrl: 'https://edithub-app-three.vercel.app/',
     featured: true,
