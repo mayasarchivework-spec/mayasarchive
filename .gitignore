@@ -1,0 +1,7 @@
+dist
+node_modules
+.vite
+assets/
+public/assets/*
+!public/assets/
+!public/assets/vinyl-record.png
