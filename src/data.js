@@ -25,7 +25,7 @@ export const projects = [
   {
     id: 'google m3e',
     slug: 'google-m3e-ad',
-    title: 'Google material 3 expressive concept ad',
+    title: 'Google material 3 expressive',
     kicker: 'motion design',
     category: 'motion',
     description: '',
@@ -40,7 +40,7 @@ export const projects = [
   {
     id: 'squarespace ad',
     slug: 'squarespace-ad',
-    title: 'squarespace concept ad',
+    title: 'squarespace ad',
     kicker: 'motion design',
     category: 'motion',
     description: '',
@@ -55,7 +55,7 @@ export const projects = [
   {
     id: 'THE',
     slug: 'theditingco',
-    title: 'theditingco web design',
+    title: 'theditingco',
     kicker: 'web design',
     category: 'web-design',
     description: '',
@@ -71,7 +71,7 @@ export const projects = [
     {
     id: 'edithub',
     slug: 'edithub',
-    title: 'edithub product design',
+    title: 'edithub',
     kicker: 'product design',
     category: 'product',
     description: '',
