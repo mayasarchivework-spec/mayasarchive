@@ -23,6 +23,21 @@ export const profile = {
 
 export const projects = [
   {
+    id: 'google m3e',
+    slug: 'google-m3e-ad',
+    title: 'squarespace concept ad',
+    kicker: 'motion design',
+    category: 'motion',
+    description: '',
+    summary: 'kinetic motion design ad i made for google material 3 expressive, showcasing their ui elements - concept work',
+    thumbnail: '/assets/google-m3e-ad.mp4',
+    media: ['/assets/google-m3e-ad.mp4'],
+    tools: ['aftereffects, affinity'],
+    skills: ['motion design'],
+    featured: true,
+    tone: 'lavender',
+  },
+  {
     id: 'squarespace ad',
     slug: 'squarespace-ad',
     title: 'squarespace concept ad',
@@ -33,7 +48,7 @@ export const projects = [
     thumbnail: '/assets/Squarespace-ad.mp4',
     media: ['/assets/Squarespace-ad.mp4'],
     tools: ['aftereffects'],
-    skills: ['motion design'],
+    skills: ['motion design, affinity'],
     featured: true,
     tone: 'lavender',
   },
