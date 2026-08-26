@@ -98,8 +98,8 @@ export const projects = [
     skills: ['Motion design'],
     externalUrl: 'https://www.instagram.com/reel/DZn6Z5FIsIR/',
     featured: false,
-    tone: 'lavender',*/
-  },
+    tone: 'lavender',
+  },*/
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
