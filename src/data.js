@@ -25,7 +25,7 @@ export const projects = [
   {
     id: 'google m3e',
     slug: 'google-m3e-ad',
-    title: 'squarespace concept ad',
+    title: 'Google material 3 expressive concept ad',
     kicker: 'motion design',
     category: 'motion',
     description: '',
