@@ -209,8 +209,8 @@ function BentoArchive() {
         <div className="bento-grid">
 
 
-        <a className="bento-card bento-movesync bento-featured-wide reveal delay-1" href="/squarespace-ad">
-          <div className="card-media"><MediaPreview src="/assets/Squarespace-ad.mp4" title="squarespace ad" /></div>
+        <a className="bento-card bento-movesync bento-featured-wide reveal delay-1" href="/google-m3e-ad">
+          <div className="card-media"><MediaPreview src="/assets/google-m3e-ad.mp4" title="google material 3 expressive ad" /></div>
           <div className="card-topline light"><span>squarespace ad</span><ArrowUpRight size={18} /></div>
         </a>
 
