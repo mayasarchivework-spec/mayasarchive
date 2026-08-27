@@ -84,7 +84,7 @@ export const projects = [
     featured: true,
     tone: 'lavender',
   },
-   {
+  /* {
     id: 'luminate',
     slug: 'luminate',
     title: 'Luminate ad',
@@ -99,7 +99,7 @@ export const projects = [
     externalUrl: 'https://www.instagram.com/reel/DZn6Z5FIsIR/',
     featured: false,
     tone: 'lavender',
-  },
+  },*/
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
