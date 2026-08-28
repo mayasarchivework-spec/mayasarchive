@@ -180,6 +180,54 @@ function EnquiryPage() {
   );
 }
 
+function EnquiryPage() {
+  React.useEffect(() => {
+    const scriptUrl = 'https://tally.so/widgets/embed.js';
+    const loadEmbeds = () => {
+      if (typeof window.Tally !== 'undefined') {
+        window.Tally.loadEmbeds();
+        return;
+      }
+      document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach((iframe) => {
+        iframe.src = iframe.dataset.tallySrc;
+      });
+    };
+    const existingScript = document.querySelector(`script[src="${scriptUrl}"]`);
+    if (existingScript) {
+      loadEmbeds();
+      return undefined;
+    }
+    const script = document.createElement('script');
+    script.src = scriptUrl;
+    script.onload = loadEmbeds;
+    script.onerror = loadEmbeds;
+    document.body.appendChild(script);
+    return undefined;
+  }, []);
+
+  return (
+    <section className="enquiry-page site-shell">
+      <a className="back-link reveal" href="/"><ArrowLeft size={16} /> Back to archive</a>
+      <div className="enquiry-intro reveal">
+        <div className="enquiry-heading">
+          <h1>Have something in mind?</h1>
+          <span className="enquiry-note">Let's make it real</span>
+        </div>
+        <div className="enquiry-contact">
+          <span>Need something else?</span>
+          <div className="enquiry-contact-actions">
+            <a className="button button-red" href={CONTACT_URL}>WhatsApp <ArrowUpRight size={15} /></a>
+            <a className="button button-outline" href="mailto:mayasarchive.zip@gmail.com">Email <Mail size={15} /></a>
+          </div>
+        </div>
+      </div>
+      <div className="tally-embed reveal delay-1">
+        <iframe data-tally-src="https://tally.so/embed/lb8xvN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1558" frameBorder="0" marginHeight="0" marginWidth="0" title="Maya's Archive Project Enquiry" />
+      </div>
+    </section>
+  );
+}
+
 function BentoArchive() {
   const featuredProjects = projects.filter((project) => project.featured).slice(0, 2);
 
