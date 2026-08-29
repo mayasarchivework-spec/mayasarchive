@@ -260,7 +260,7 @@ function AboutCard() {
     <section className={`about-section reveal delay-2 ${isVisible ? 'is-visible' : ''}`} id="about" ref={cardRef}>
       <div className="about-copy">
         <span className="card-kicker">About me</span>
-        <h3>bringing ideas to life</h3>
+        <h3>bringing my ideas to <em>life.</em></h3>
         <p>Hey!, I’m Muna, better known as maya's archive. I’m a self-taught motion and product designer who brings static ideas to life. By day, I craft high-energy, 2D social media ads that stop the scroll. By night, motion design is my playground for pure creative expression. Beyond the screen, I design functional digital products, taking them from a messy first sketch all the way to a developer-ready launch.</p>
         <a className="text-link" href="/projects">View my work <ArrowUpRight size={15} /></a>
       </div>
@@ -364,8 +364,10 @@ function Footer() {
       <div className="footer-inner site-shell">
         <div className="footer-topline"><span>Have a good idea?</span><a href="/work-with-me">Let's make it real <ArrowUpRight size={16} /></a></div>
         <div className="footer-socials"><span className="section-label"></span><div>{profile.links.map((link) => <a key={link.label} href={link.href} target={link.href.startsWith('mailto') ? undefined : '_blank'} rel={link.href.startsWith('mailto') ? undefined : 'noreferrer'}>{link.label}</a>)}</div></div>
-        <div className="footer-word">mayasarchive</div>
-        <div className="footer-bottom"><span>© 2026 Maya's Archive All rights reserved</span><span>Made with curiosity in the UK</span></div>
+        <div className="footer-lockup">
+          <div className="footer-word">Maya's Archive</div>
+          <div className="footer-bottom"><span>Made by Maya's Archive<br />in Edinburgh</span><span>© 2026</span></div>
+        </div>
       </div>
     </footer>
   );
