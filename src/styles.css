@@ -274,8 +274,8 @@ main { min-height: 60vh; overflow: clip; }
 .more-work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }.more-work-grid .project-card:nth-child(n) { margin-top: 0; }
 .not-found { padding-top: 210px; padding-bottom: 220px; }.not-found h1 { margin: 20px 0 42px; font-size: clamp(5rem, 12vw, 12rem); font-weight: 800; letter-spacing: -0.13em; line-height: 0.68; }.not-found em { color: var(--purple); font-family: 'Caveat', cursive; font-weight: 500; }
 
-.site-footer { color: var(--text); background: var(--red); }
-.footer-inner { padding-top: 35px; padding-bottom: 22px; padding-left: 20px; padding-right: 20px; }
+.site-footer { overflow: hidden; color: var(--text); background: var(--red); }
+.footer-inner { padding-top: 35px; padding-bottom: 48px; padding-left: 20px; padding-right: 20px; }
 .footer-topline { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 78px; border-bottom: 1px solid rgba(245,241,236,0.25); font-size: 0.9rem; }
 .footer-topline > span { font-family: 'DM Mono', monospace; font-size: 0.66rem; letter-spacing: 0.04em; text-transform: uppercase; }.footer-topline a { position: relative; display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }.footer-topline a::after, .footer-socials a::after { position: absolute; right: 0; bottom: -5px; left: 0; height: 1px; background: currentColor; content: ''; transform: scaleX(0); transform-origin: left center; transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1); }.footer-topline a:hover, .footer-socials a:hover { color: var(--text); }.footer-topline a:hover::after, .footer-socials a:hover::after { transform: scaleX(1); }
 .footer-socials { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 32px 0 26px; }.footer-socials .section-label { color: rgba(245,241,236,0.62); }.footer-socials .section-label::before { background: var(--acid); }.footer-socials > div { display: flex; flex-wrap: wrap; gap: 14px 24px; }.footer-socials a { position: relative; font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase; }
