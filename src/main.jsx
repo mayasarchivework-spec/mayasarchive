@@ -190,7 +190,7 @@ function BentoArchive() {
 
         <div className="bento-card bento-tools reveal delay-1">
           <div className="card-topline"><span>Tool kit</span></div>
-          <div className="tool-list"><span>Affinity • Design</span><span>After Effects • Motion design</span><span>Framer • UI/UX design</span><span>React / Next.js • Frontend Eng</span><span>Blender • 3D Design</span></div>
+          <div className="tool-list"><span>Affinity • Graphic Design</span><span>After Effects • Motion design</span><span>Framer • UI/UX design</span><span>React / Next.js • Frontend Eng</span><span>Blender • 3D Design</span></div>
           <div className="tools-asterisk">*</div>
         </div>
 
