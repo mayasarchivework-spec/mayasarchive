@@ -84,22 +84,21 @@ export const projects = [
     featured: false,
     tone: 'lavender',
   },
-  /* {
-    id: 'luminate',
-    slug: 'luminate',
-    title: 'Luminate ad',
+  {
+    id: 'causal',
+    slug: 'causal',
+    title: 'causal ad',
     kicker: 'social media ad',
     category: 'motion',
     description: '',
-    summary: 'Social media ad i made, for luminate a specialized tech and dev team focusing on building customized digital products and applications.',
-    thumbnail: '/assets/luminate-ad-2.mp4',
-    media: ['/assets/luminate-ad-2.mp4'],
-    tools: ['After Effects'],
+    summary: 'Social media ad i made, for causal. An infinite workspace for your ideas.',
+    thumbnail: '/assets/causal-ad.mp4',
+    media: ['/assets/causal-ad.mp4'],
+    tools: ['After Effects, affinity, framer'],
     skills: ['Motion design'],
-    externalUrl: 'https://www.instagram.com/reel/DZn6Z5FIsIR/',
     featured: false,
     tone: 'lavender',
-  },*/
+  },
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
