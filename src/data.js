@@ -83,7 +83,7 @@ export const projects = [
     featured: false,
     tone: 'lavender',
   },*/
-  {
+  /*{
     id: 'THE',
     slug: 'theditingco',
     title: 'theditingco',
@@ -98,7 +98,7 @@ export const projects = [
     externalUrl: 'https://theditingcompany.vercel.app/',
     featured: false,
     tone: 'lavender',
-  },
+  },*/
 ];
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
