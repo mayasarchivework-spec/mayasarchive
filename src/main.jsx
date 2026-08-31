@@ -375,6 +375,7 @@ function Footer() {
 
 function MediaPreview({ src, title, controls = false, sound = false }) {
   const videoRef = React.useRef(null);
+  const [isVerticalVideo, setIsVerticalVideo] = React.useState(false);
   React.useEffect(() => {
     if (!videoRef.current) return;
     const video = videoRef.current;
@@ -387,8 +388,8 @@ function MediaPreview({ src, title, controls = false, sound = false }) {
 
   if (!src) return null;
   const isMuted = controls ? !sound : true;
-  if (isVideo(src)) return <video ref={videoRef} src={src} title={title} autoPlay controls={controls} loop muted={isMuted} playsInline preload="metadata" />;
-  return <img src={src} alt={title} draggable="false" />;
+  if (isVideo(src)) return <video ref={videoRef} className={isVerticalVideo ? 'is-vertical-video' : ''} src={src} title={title} autoPlay controls={controls} controlsList="nodownload" disablePictureInPicture loop muted={isMuted} playsInline preload="metadata" draggable="false" onContextMenu={(event) => event.preventDefault()} onDragStart={(event) => event.preventDefault()} onLoadedMetadata={(event) => setIsVerticalVideo(event.currentTarget.videoHeight > event.currentTarget.videoWidth)} />;
+  return <img src={src} alt={title} draggable="false" onContextMenu={(event) => event.preventDefault()} onDragStart={(event) => event.preventDefault()} />;
 }
 
 function isVideo(src) { return /\.(mp4|webm|mov)(\?|$)/i.test(src || ''); }
