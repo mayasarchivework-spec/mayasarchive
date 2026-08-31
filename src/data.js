@@ -68,7 +68,7 @@ export const projects = [
     featured: false,
     tone: 'lavender',
   },
-  {
+  /*{
     id: 'squarespace ad',
     slug: 'squarespace-ad',
     title: 'squarespace ad',
@@ -82,7 +82,7 @@ export const projects = [
     skills: ['motion design, affinity'],
     featured: false,
     tone: 'lavender',
-  },
+  },*/
   {
     id: 'THE',
     slug: 'theditingco',
