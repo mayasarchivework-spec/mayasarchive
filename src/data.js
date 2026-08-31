@@ -49,7 +49,7 @@ export const projects = [
     media: ['/assets/Squarespace-ad.mp4'],
     tools: ['aftereffects'],
     skills: ['motion design, affinity'],
-    featured: true,
+    featured: false,
     tone: 'lavender',
   },
   {
@@ -96,7 +96,7 @@ export const projects = [
     media: ['/assets/causal-ad.mp4'],
     tools: ['After Effects, affinity, framer'],
     skills: ['Motion design'],
-    featured: false,
+    featured: true,
     tone: 'lavender',
   },
 ];
