@@ -169,7 +169,7 @@ function EnquiryPage() {
           <span>Need something else?</span>
           <div className="enquiry-contact-actions">
             <a className="button button-red" href={CONTACT_URL}>WhatsApp <ArrowUpRight size={15} /></a>
-            <a className="button button-outline" href="mailto:mayasarchive.zip@gmail.com">Email <Mail size={15} /></a>
+            <a className="button button-outline" href="mailto:mayasarchive.work@gmail.com">Email <Mail size={15} /></a>
           </div>
         </div>
       </div>
