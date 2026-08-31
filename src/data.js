@@ -5,7 +5,6 @@ export const CONTACT_URL = 'https://wa.me/message/CXY6GG6AUHNRE1';
 export const CATEGORIES = [
   { id: 'motion', label: 'Motion design' },
   { id: 'product', label: 'Product design' },
-  { id: 'web-design', label: 'selected work' },
 ];
 
 export const profile = {
@@ -88,7 +87,7 @@ export const projects = [
     slug: 'theditingco',
     title: 'theditingco',
     kicker: 'web design',
-    category: 'web-design',
+    category: 'product',
     description: '',
     summary: 'Portfolio/website designed for theditingco',
     thumbnail: '/assets/THE-thumbnail.png',
