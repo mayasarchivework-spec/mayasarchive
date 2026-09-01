@@ -67,7 +67,7 @@ export const projects = [
     featured: false,
     tone: 'lavender',
   },
-{
+/*{
     id: 'ego-death',
     slug: 'ego-death',
     title: 'ego death',
@@ -81,7 +81,7 @@ export const projects = [
     skills: ['motion design, story telling'],
     featured: false,
     tone: 'lavender',
-  },
+  },*/
   /*{
     id: 'squarespace ad',
     slug: 'squarespace-ad',
