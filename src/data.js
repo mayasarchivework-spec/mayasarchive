@@ -60,7 +60,7 @@ export const projects = [
     description: '',
     summary: 'realised a lot of editors want a marketplace to get scenepacks and editing assets so i made one. Concept work.',
     thumbnail: '/assets/edithub-thumbnail.png',
-    media: ['/assets/edithub-2.png', '/assets/edithub-3.png'],
+    media: ['/assets/edithub-case-study.png'],
     tools: ['next.js, css, framer'],
     skills: ['web design, product design'],
     externalUrl: 'https://edithub-app-three.vercel.app/',
