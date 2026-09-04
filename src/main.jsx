@@ -165,13 +165,13 @@ function EnquiryPage() {
           <h1>Have something in mind?</h1>
           <span className="enquiry-note">Let's make it real</span>
         </div>
-        <div className="enquiry-contact">
+        {/* <div className="enquiry-contact">
           <span>Need something else?</span>
           <div className="enquiry-contact-actions">
             <a className="button button-red" href={CONTACT_URL}>WhatsApp <ArrowUpRight size={15} /></a>
             <a className="button button-outline" href="mailto:mayasarchive.work@gmail.com">Email <Mail size={15} /></a>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="tally-embed reveal delay-1">
         <iframe data-tally-src="https://tally.so/embed/lb8xvN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1558" frameBorder="0" marginHeight="0" marginWidth="0" title="Maya's Archive Project Enquiry" />
