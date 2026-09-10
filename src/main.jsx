@@ -261,7 +261,7 @@ function AboutCard() {
       <div className="about-copy">
         <span className="card-kicker">About me</span>
         <h3>bringing my ideas to <em>life.</em></h3>
-        <p>Hey!, I’m Muna, better known as maya's archive. I’m a self-taught motion and product designer who brings static ideas to life. By day, I craft high-energy, 2D social media ads that stop the scroll. By night, motion design is my playground for pure creative expression. Beyond the screen, I design functional digital products, taking them from a messy first sketch all the way to a developer-ready launch.</p>
+        <p>Hey!, I’m Muna. I’m a self-taught motion and product designer who brings static ideas to life. By day, I craft high-energy, 2D social media ads that stop the scroll. By night, motion design is my playground for pure creative expression. Beyond the screen, I design functional digital products, taking them from a messy first sketch all the way to a developer-ready launch. I built mayas arcive - a digital archive of all my work.</p>
         <a className="text-link" href="/projects">View my work <ArrowUpRight size={15} /></a>
       </div>
       <div className="about-curve" aria-hidden="true">
