@@ -33,7 +33,7 @@ export const projects = [
     media: ['/assets/Ikea_Ad.mp4'],
     tools: ['After Effects, affinity'],
     skills: ['Motion design'],
-    featured: true,
+    featured: false,
     tone: 'lavender',
   },
   {
@@ -63,7 +63,7 @@ export const projects = [
     media: ['/assets/causal_ad.mp4'],
     tools: ['After Effects, affinity,'],
     skills: ['Motion design'],
-    featured: false,
+    featured: true,
     tone: 'lavender',
   },
   {
