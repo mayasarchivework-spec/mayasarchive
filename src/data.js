@@ -63,6 +63,7 @@ export const projects = [
     media: ['/assets/causal_ad.mp4'],
     tools: ['After Effects, affinity,'],
     skills: ['Motion design'],
+    externalUrl: 'https://www.instagram.com/p/Dct4uJqSMLO/',
     featured: true,
     tone: 'lavender',
   },
