@@ -366,7 +366,7 @@ function Footer() {
         <div className="footer-socials"><span className="section-label"></span><div>{profile.links.map((link) => <a key={link.label} href={link.href} target={link.href.startsWith('mailto') ? undefined : '_blank'} rel={link.href.startsWith('mailto') ? undefined : 'noreferrer'}>{link.label}</a>)}</div></div>
         <div className="footer-lockup">
           <div className="footer-word">Maya's Archive</div>
-          <div className="footer-bottom"><span>Made by Maya's Archive<br />in Edinburgh</span><span>© 2026</span></div>
+          <div className="footer-bottom"><span>Maya's Archive</span><span>© 2026</span></div>
         </div>
       </div>
     </footer>
