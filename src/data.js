@@ -4,7 +4,7 @@ export const CONTACT_URL = 'https://wa.me/message/CXY6GG6AUHNRE1';
 
 export const CATEGORIES = [
   { id: 'motion', label: 'Motion design' },
-  { id: 'product', label: 'Product design/Software development' },
+  { id: 'product', label: 'Product design' },
 ];
 
 export const profile = {
@@ -86,7 +86,7 @@ export const projects = [
     id: 'edithub',
     slug: 'edithub',
     title: 'edithub',
-    kicker: 'case study',
+    kicker: 'Product design/Software development',
     category: 'product',
     description: '',
     summary: 'realised a lot of editors want a marketplace to get scenepacks and editing assets so i made one. Concept work.',
@@ -102,7 +102,7 @@ export const projects = [
     id: 'sourcd',
     slug: 'sourcd',
     title: 'sourcd.',
-    kicker: 'product design',
+    kicker: 'Product design/Software development',
     category: 'product',
     description: '',
     summary: 'Platform for creatives to save inspiration from any social meadia. Sourcd is still on development so the github is not available to the public',
