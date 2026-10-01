@@ -94,7 +94,7 @@ export const projects = [
     media: ['/assets/edithub-case-study.png'],
     tools: ['next.js, css, framer'],
     skills: ['web design, product design'],
-    externalUrl: 'https://edithub-app-three.vercel.app/',
+    externalUrl: 'https://github.com/edithub-app/edithub-app',
     featured: false,
     tone: 'lavender',
   },
