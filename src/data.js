@@ -22,6 +22,21 @@ export const profile = {
 
 export const projects = [
   {
+    id: 'sourcd',
+    slug: 'sourcd',
+    title: 'sourcd.',
+    kicker: 'Product design/Software development',
+    category: 'product',
+    description: '',
+    summary: 'Platform for creatives to save inspiration from any social meadia. Sourcd is still on development so the github is not available to the public',
+    thumbnail: '/assets/sourcd-thumbnail.png',
+    media: ['/assets/sourcd-case-study.png'],
+    tools: ['figma, affinity, next.js'],
+    skills: ['ui design,product design, front-end development'],
+    featured: false,
+    tone: 'lavender',
+  },
+  {
     id: 'Ikea-ad',
     slug: 'Ikea-ad',
     title: 'Ikea Ad',
@@ -98,21 +113,7 @@ export const projects = [
     featured: false,
     tone: 'lavender',
   },
-  {
-    id: 'sourcd',
-    slug: 'sourcd',
-    title: 'sourcd.',
-    kicker: 'Product design/Software development',
-    category: 'product',
-    description: '',
-    summary: 'Platform for creatives to save inspiration from any social meadia. Sourcd is still on development so the github is not available to the public',
-    thumbnail: '/assets/sourcd-thumbnail.png',
-    media: ['/assets/sourcd-case-study.png'],
-    tools: ['figma, affinity, next.js'],
-    skills: ['ui design,product design, front-end development'],
-    featured: false,
-    tone: 'lavender',
-  },
+
   /*{
     id: 'squarespace ad',
     slug: 'squarespace-ad',
