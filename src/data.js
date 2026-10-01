@@ -4,7 +4,7 @@ export const CONTACT_URL = 'https://wa.me/message/CXY6GG6AUHNRE1';
 
 export const CATEGORIES = [
   { id: 'motion', label: 'Motion design' },
-  { id: 'product', label: 'Product design/software development' },
+  { id: 'product', label: 'Product design/Software development' },
 ];
 
 export const profile = {
