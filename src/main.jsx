@@ -334,7 +334,7 @@ function ProjectPage({ project }) {
             <p className="project-detail-desc">{project.description}</p>
             <MetaList label="Role" items={project.skills} />
             <MetaList label="Toolkit" items={project.tools} />
-            <a className="button button-red project-detail-cta" href="https://www.mayasarchive.xyz/work-with-me">>Start a conversation <ArrowUpRight size={15} /></a>
+            <a className="button button-red project-detail-cta" href="https://www.mayasarchive.xyz/work-with-me">Start a conversation <ArrowUpRight size={15} /></a>
             {project.externalUrl && (
               <a className="button button-red project-detail-cta" href={project.externalUrl}>View project<ArrowUpRight size={15} /></a>
             )}
