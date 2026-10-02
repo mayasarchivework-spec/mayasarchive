@@ -190,15 +190,15 @@ function BentoArchive() {
 
         <div className="bento-card bento-tools reveal delay-1">
           <div className="card-topline"><span>Tool kit</span></div>
-          <div className="tool-list"><span>Affinity • Graphic Design</span><span>After Effects • Motion design</span><span>Framer • UI/UX design</span><span>React / Next.js • Frontend Eng</span><span>Blender • 3D Design</span></div>
+          <div className="tool-list"><span>Affinity • Graphic Design</span><span>After Effects • Motion design</span><span>React / Next.js • Frontend Eng</span><span>Blender • 3D Design</span></div>
           <div className="tools-asterisk">*</div>
         </div>
 
         <div className="bento-card bento-services reveal delay-1">
           <div className="card-topline"><span>what can i do?</span></div>
           <ul className="service-list">
-            <li><span>01</span>Motion design → make brands and digital products feel more alive.<Asterisk size={16} /></li> 
-            <li><span>02</span> UX/Product design → how things look, work and create value.<Asterisk size={16} /></li>
+            <li><span>01</span> Motion design → make brands and digital products feel more alive.<Asterisk size={16} /></li> 
+            <li><span>02</span> Product design → how things look, work and create value.<Asterisk size={16} /></li>
             <li><span>03</span> Frontend Eng → bridging the gap between design and development.<Asterisk size={16} /></li>
           </ul>
         </div>
