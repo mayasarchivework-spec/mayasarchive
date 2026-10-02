@@ -35,6 +35,7 @@ export const projects = [
     skills: ['ui design,product design, front-end development'],
     featured: false,
     tone: 'lavender',
+    year: '2026',
   },
   {
     id: 'Ikea-ad',
@@ -50,6 +51,7 @@ export const projects = [
     skills: ['Motion design'],
     featured: false,
     tone: 'lavender',
+    year: '2026',
   },
   {
     id: 'Quimera',
@@ -65,6 +67,7 @@ export const projects = [
     skills: ['Motion design, Logo animation'],
     featured: false,
     tone: 'lavender',
+    year: '2026',
   },
   {
     id: 'causal',
@@ -81,6 +84,7 @@ export const projects = [
     externalUrl: 'https://www.instagram.com/p/Dct4uJqSMLO/',
     featured: true,
     tone: 'lavender',
+    year: '2026',
   },
   {
     id: 'google m3e',
@@ -96,6 +100,7 @@ export const projects = [
     skills: ['motion design'],
     featured: true,
     tone: 'lavender',
+    year: '2026',
   },
     {
     id: 'edithub',
@@ -112,6 +117,7 @@ export const projects = [
     externalUrl: 'https://github.com/edithub-app/edithub-app',
     featured: false,
     tone: 'lavender',
+    year: '2026',
   },
 
   /*{
