@@ -28,7 +28,7 @@ export const projects = [
     kicker: 'Product design/Software development',
     category: 'product',
     description: '',
-    summary: 'Platform for creatives to save inspiration from any social meadia. Sourcd is still on development so the github is not available to the public',
+    summary: 'Platform for creatives to save inspiration from any where onlines. Sourcd is still on development so the github is not available to the public',
     thumbnail: '/assets/sourcd-thumbnail.png',
     media: ['/assets/sourcd-case-study.png'],
     tools: ['framer, affinity, next.js'],
