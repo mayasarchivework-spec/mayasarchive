@@ -134,6 +134,7 @@ export const projects = [
     skills: ['motion design'],
     featured: false,
     tone: 'lavender',
+    year: '2026',
   },
   /*{
     id: 'THE',
