@@ -134,6 +134,7 @@ export const projects = [
     skills: ['motion design'],
     featured: false,
     tone: 'lavender',
+    externalUrl: 'https://www.6ixstudio.it/',
     year: '2026',
   },
   /*{
