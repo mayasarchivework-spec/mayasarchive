@@ -120,21 +120,21 @@ export const projects = [
     year: '2026',
   },
 
-  /*{
-    id: 'squarespace ad',
-    slug: 'squarespace-ad',
-    title: 'squarespace ad',
+  {
+    id: '6ixstudio',
+    slug: '6ixstudio',
+    title: '6ixstudio showreel',
     kicker: 'motion design',
     category: 'motion',
     description: '',
-    summary: 'kinetic motion design ad i made for squarespace - concept work',
-    thumbnail: '/assets/Squarespace-ad.mp4',
-    media: ['/assets/Squarespace-ad.mp4'],
-    tools: ['aftereffects'],
-    skills: ['motion design, affinity'],
+    summary: 'Showreel for 6ixstudio - A creative studio based in italy',
+    thumbnail: '/assets/6Ixstudio.mp4',
+    media: ['/assets/6Ixstudio.mp4'],
+    tools: ['aftereffects, affinity'],
+    skills: ['motion design'],
     featured: false,
     tone: 'lavender',
-  },*/
+  },
   /*{
     id: 'THE',
     slug: 'theditingco',
