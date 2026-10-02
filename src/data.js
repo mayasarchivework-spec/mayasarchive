@@ -31,7 +31,7 @@ export const projects = [
     summary: 'Platform for creatives to save inspiration from any social meadia. Sourcd is still on development so the github is not available to the public',
     thumbnail: '/assets/sourcd-thumbnail.png',
     media: ['/assets/sourcd-case-study.png'],
-    tools: ['figma, affinity, next.js'],
+    tools: ['framer, affinity, next.js'],
     skills: ['ui design,product design, front-end development'],
     featured: false,
     tone: 'lavender',
