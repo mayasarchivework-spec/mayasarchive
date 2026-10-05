@@ -18,6 +18,8 @@ export const profile = {
     { label: 'TikTok', href: 'https://www.tiktok.com/@mayasarchive.zip', icon: 'tiktok' },
     { label: 'threads', href: 'https://www.threads.com/@mayasarchive.zip', icon: 'threads' },
     { label: 'github', href: 'https://github.com/mayasarchivework-spec', icon: 'github' },
+    { label: 'youtube', href: 'https://www.youtube.com/@mayasarchivee', icon: 'youtube' },
+    
   ],
 };
 
