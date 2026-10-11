@@ -1,5 +1,3 @@
-import { GamepadDirectional } from "lucide-react";
-
 export const CONTACT_URL = 'https://wa.me/message/CXY6GG6AUHNRE1';
 
 export const CATEGORIES = [
@@ -23,7 +21,7 @@ export const profile = {
   ],
 };
 
-export const projects = 
+export const projects = [
   {
     id: 'google m3e',
     slug: 'google-m3e-ad',
