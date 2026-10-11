@@ -178,7 +178,7 @@ function EnquiryPage() {
         </div> */}
       </div>
       <div className="tally-embed reveal delay-1">
-        <iframe data-tally-src="https://tally.so/embed/lb8xvN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1558" frameBorder="0" marginHeight="0" marginWidth="0" title="Maya's Archive Project Enquiry" />
+          <formester-standard-form set-auto-height="true" height="100%" width="100%" id="uz3h9Oiq4" url="https://jcyqiidv.formester.com/f/uz3h9Oiq4" />
       </div>
     </section>
   );
