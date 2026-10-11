@@ -57,7 +57,7 @@ export const projects = [
     tone: 'lavender',
     year: '2026',
   },
-  {
+ /* {
     id: 'Ikea-ad',
     slug: 'Ikea-ad',
     title: 'Ikea Ad',
@@ -72,7 +72,7 @@ export const projects = [
     featured: false,
     tone: 'lavender',
     year: '2026',
-  },
+  }, */
   {
     id: 'Quimera',
     slug: 'Quimera',
