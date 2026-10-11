@@ -82,7 +82,7 @@ export const projects = [
     description: '',
     summary: 'Logo animations i made for the brand identity of quimera',
     thumbnail: '/assets/Quimera_Animation_2.mp4',
-    media: ['/assets/Quimera_Animation_1.mp4', '/assets/Quimera_Animation_2.mp4', '/assets/Quimera_Animation_3.mp4'],
+    media: ['/assets/Quimera_Animation_1.mp4', '/assets/Quimera_Animation_2.mp4' /*'/assets/Quimera_Animation_3.mp4'*/],
     tools: ['After Effects, affinity'],
     skills: ['Motion design, Logo animation'],
     featured: false,
