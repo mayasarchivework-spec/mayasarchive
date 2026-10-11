@@ -134,28 +134,32 @@ function Hero({ showChrome = false }) {
 
 function EnquiryPage() {
   React.useEffect(() => {
-    const scriptUrl = 'https://tally.so/widgets/embed.js';
-    const loadEmbeds = () => {
-      if (typeof window.Tally !== 'undefined') {
-        window.Tally.loadEmbeds();
-        return;
-      }
-      document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach((iframe) => {
-        iframe.src = iframe.dataset.tallySrc;
-      });
-    };
-    const existingScript = document.querySelector(`script[src="${scriptUrl}"]`);
-    if (existingScript) {
-      loadEmbeds();
-      return undefined;
+    const scriptUrl = 'https://assets.formester.com/widget/standard.js';
+
+    const existingScript = document.querySelector(
+      `script[src="${scriptUrl}"]`
+    );
+
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = scriptUrl;
+      script.type = 'module';
+      document.body.appendChild(script);
     }
-    const script = document.createElement('script');
-    script.src = scriptUrl;
-    script.onload = loadEmbeds;
-    script.onerror = loadEmbeds;
-    document.body.appendChild(script);
-    return undefined;
   }, []);
+
+  return (
+    <div style={{ width: '100%' }}>
+      <formester-standard-form
+        set-auto-height="true"
+        height="100%"
+        width="100%"
+        id="uz3h9Oiq4"
+        url="https://jcyqiidv.formester.com/f/uz3h9Oiq4"
+      />
+    </div>
+  );
+}
 
   return (
     <section className="enquiry-page site-shell">
