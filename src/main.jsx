@@ -252,7 +252,7 @@ function AboutCard() {
       <div className="about-copy">
         <span className="card-kicker">About me</span>
         <h3>bringing my ideas to <em>life.</em></h3>
-        <p>Hey!, I'm Muna. I'm a self-taught motion and product designer who brings static ideas to life. By day, I craft high-energy, 2D social media ads that stop the scroll. By night, motion de...</p>
+        <p>Hey!, I'm Muna. I'm a self-taught motion and product designer who brings static ideas to life. By day, I craft high-energy, 2D motion graphics that stop the scroll. By night, motion design becomes my playground and i design softwares and tools that i wished existed</p>
         <a className="text-link" href="/projects">View my work <ArrowUpRight size={15} /></a>
       </div>
       <div className="about-curve" aria-hidden="true">
