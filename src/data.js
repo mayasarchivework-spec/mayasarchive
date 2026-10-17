@@ -121,7 +121,7 @@ export const projects = [
     tone: 'lavender',
     year: '2026',
   },
-  {
+ /*{
     id: 'Quimera',
     slug: 'Quimera',
     title: 'Quimera',
@@ -136,7 +136,7 @@ export const projects = [
     featured: false,
     tone: 'lavender',
     year: '2026',
-  },
+  },*/
   /*{
     id: 'THE',
     slug: 'theditingco',
