@@ -53,6 +53,7 @@ export const projects = [
     featured: false,
     tone: 'lavender',
     year: '2026',
+    externalUrl: 'https://github.com/mayasarchivework-spec/Sourcd',
   },
   {
     id: '6ixstudio',
