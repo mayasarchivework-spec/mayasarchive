@@ -134,38 +134,42 @@ function Hero({ showChrome = false }) {
 
 function EnquiryPage() {
   React.useEffect(() => {
-    const scriptUrl = 'https://assets.formester.com/widget/standard.js';
+    const scriptUrl = 'https://tally.so/widgets/embed.js';
+    let script = document.querySelector(`script[src="${scriptUrl}"]`);
 
-    const existingScript = document.querySelector(
-      `script[src="${scriptUrl}"]`
-    );
-
-    if (!existingScript) {
-      const script = document.createElement('script');
+    if (!script) {
+      script = document.createElement('script');
       script.src = scriptUrl;
-      script.type = 'module';
+      script.async = true;
       document.body.appendChild(script);
+    } else if (window.Tally) {
+      window.Tally.loadEmbeds?.();
     }
   }, []);
 
   return (
     <section className="enquiry-page site-shell">
-      <a className="back-link reveal" href="/"><ArrowLeft size={16} /> Back to archive</a>
+      <a className="back-link reveal" href="/">
+        <ArrowLeft size={16} /> Back to archive
+      </a>
+
       <div className="enquiry-intro reveal">
         <div className="enquiry-heading">
           <h1>Have something in mind?</h1>
           <span className="enquiry-note">Let's make it real</span>
         </div>
-        {/* <div className="enquiry-contact">
-          <span>Need something else?</span>
-          <div className="enquiry-contact-actions">
-            <a className="button button-red" href={CONTACT_URL}>WhatsApp <ArrowUpRight size={15} /></a>
-            <a className="button button-outline" href="mailto:mayasarchive.work@gmail.com">Email <Mail size={15} /></a>
-          </div>
-        </div> */}
       </div>
+
       <div className="tally-embed reveal delay-1">
-        <formester-standard-form set-auto-height="true" height="100%" width="100%" id="uz3h9Oiq4" url="https://jcyqiidv.formester.com/f/uz3h9Oiq4" />
+        <iframe
+          data-tally-src="https://tally.so/r/lb8xvN?transparentBackground=1"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+          title="Maya's Archive Project Enquiry"
+        />
       </div>
     </section>
   );
