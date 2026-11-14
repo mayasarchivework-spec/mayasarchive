@@ -2,7 +2,7 @@ export const CONTACT_URL = 'https://wa.me/message/CXY6GG6AUHNRE1';
 
 export const CATEGORIES = [
   { id: 'motion', label: 'Motion design' },
-  { id: 'product', label: 'Product design' },
+  { id: 'selected-work', label: 'Selected Work' },
 ];
 
 export const profile = {
@@ -14,7 +14,7 @@ export const profile = {
   links: [
     { label: 'Instagram', href: 'https://www.instagram.com/mayasarchive.zip/', icon: 'instagram' },
     { label: 'TikTok', href: 'https://www.tiktok.com/@mayasarchive.zip', icon: 'tiktok' },
-    /*{ label: 'threads', href: 'https://www.threads.com/@mayasarchive.zip', icon: 'threads' },*/
+    { label: 'threads', href: 'https://www.threads.com/@mayasarchive.zip', icon: 'threads' },
     { label: 'github', href: 'https://github.com/mayasarchivework-spec', icon: 'github' },
     /*{ label: 'youtube', href: 'https://www.youtube.com/@mayasarchivee', icon: 'youtube' },*/
     
@@ -42,8 +42,8 @@ export const projects = [
     id: 'sourcd',
     slug: 'sourcd',
     title: 'sourcd.',
-    kicker: 'Product design/Software development',
-    category: 'product',
+    kicker: 'Product design',
+    category: 'selected-work',
     description: '',
     summary: 'Platform for creatives to save inspiration from any where onlines. Sourcd is still on development so the repo is not available to the public',
     thumbnail: '/assets/sourcd-thumbnail.png',
@@ -55,7 +55,7 @@ export const projects = [
     year: '2026',
     externalUrl: 'https://github.com/mayasarchivework-spec/Sourcd',
   },
-  {
+ /* {
     id: '6ixstudio',
     slug: '6ixstudio',
     title: '6ixstudio showreel',
@@ -71,7 +71,7 @@ export const projects = [
     tone: 'lavender',
     externalUrl: 'https://www.6ixstudio.it/',
     year: '2026',
-  },
+  },*/
  /* {
     id: 'Ikea-ad',
     slug: 'Ikea-ad',
@@ -109,8 +109,8 @@ export const projects = [
     id: 'edithub',
     slug: 'edithub',
     title: 'edithub',
-    kicker: 'Product design/Software development',
-    category: 'product',
+    kicker: 'Product design',
+    category: 'selected-work',
     description: '',
     summary: 'realised a lot of editors want a marketplace to get scenepacks and editing assets so i made one. Concept work.',
     thumbnail: '/assets/edithub-thumbnail.png',
