@@ -105,7 +105,7 @@ export const projects = [
     tone: 'lavender',
     year: '2026',
   },
-  {
+  /*{
     id: 'edithub',
     slug: 'edithub',
     title: 'edithub',
@@ -121,7 +121,7 @@ export const projects = [
     featured: false,
     tone: 'lavender',
     year: '2026',
-  },
+  },*/
  /*{
     id: 'Quimera',
     slug: 'Quimera',
